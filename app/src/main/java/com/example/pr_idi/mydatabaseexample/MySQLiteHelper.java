@@ -21,7 +21,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     public static final String COLUMN_CRITICS_RATE = "critics_rate";
 
     private static final String DATABASE_NAME = "films.db";
-    private static final int DATABASE_VERSION = 1;
+    private static final int DATABASE_VERSION = 2;
 
     // Database creation sql statement
     private static final String DATABASE_CREATE = "create table " + TABLE_FILMS + "( "
@@ -41,6 +41,38 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase database) {
         database.execSQL(DATABASE_CREATE);
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+                "value('El ataque de los tomates asesinos'," +
+                "'Estados Unidos de America'," +
+                "'1986'," +
+                "'Algun tio'," +
+                "'Algun otro tio'," +
+                "'1');");
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+                "" +
+                "value('El ataque de los tomates asesinos 2'," +
+                "'Estados Unidos de America'," +
+                "'1987'," +
+                "'Algun tio'," +
+                "'Alguna tia'," +
+                "'5');");
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+                "" +
+                "value('Breakdance 2: Electic Boogaloo'," +
+                "'Estados Unidos de America'," +
+                "'1984'," +
+                "'Sam Fistenberg'," +
+                "'Alguien raro'," +
+                "'4');");
     }
 
     @Override
