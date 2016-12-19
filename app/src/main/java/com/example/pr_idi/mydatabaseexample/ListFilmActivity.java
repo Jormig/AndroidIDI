@@ -13,7 +13,6 @@ public class ListFilmActivity extends Activity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,8 +28,10 @@ public class ListFilmActivity extends Activity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        String[] myDataset = new String[100];
-        mAdapter = new ListFilmAdapter(myDataset);
+        String[] myDataset = new String[2];
+        myDataset[0] = "HELLO";
+        myDataset[1] = "HELLO";
+        mAdapter = new ListFilmAdapter(myDataset,this);
         mRecyclerView.setAdapter(mAdapter);
     }
 }

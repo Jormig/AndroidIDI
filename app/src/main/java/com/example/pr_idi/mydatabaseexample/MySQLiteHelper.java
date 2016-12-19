@@ -7,7 +7,10 @@ package com.example.pr_idi.mydatabaseexample;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.database.Cursor;
 import android.util.Log;
+
+import java.util.ArrayList;
 
 public class MySQLiteHelper extends SQLiteOpenHelper {
 
@@ -45,18 +48,18 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
                 ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
                 + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
-                "value('El ataque de los tomates asesinos'," +
+                "values('El ataque de los tomates asesinos'," +
                 "'Estados Unidos de America'," +
                 "'1986'," +
                 "'Algun tio'," +
                 "'Algun otro tio'," +
-                "'1');");
+                "1);");
         database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
                 "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
                 ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
                 + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
                 "" +
-                "value('El ataque de los tomates asesinos 2'," +
+                "values('El ataque de los tomates asesinos 2'," +
                 "'Estados Unidos de America'," +
                 "'1987'," +
                 "'Algun tio'," +
@@ -67,7 +70,7 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
                 + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
                 "" +
-                "value('Breakdance 2: Electic Boogaloo'," +
+                "values('Breakdance 2: Electic Boogaloo'," +
                 "'Estados Unidos de America'," +
                 "'1984'," +
                 "'Sam Fistenberg'," +

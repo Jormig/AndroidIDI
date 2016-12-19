@@ -21,21 +21,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\classes.jar"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-ui-25.0.1_fac5e45c3aba470d93ff1aedcb44c4c36a91b00d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="297d4bcf6ed4e747a1bf7d0d094a2d911a8d3a8e">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-25.0.1_0b2989586358680b35908f1f50d24aea1c07f986\classes.dex" />
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.0.0_9c792883304922f4c39eaa68c4a1dde247f10cc0\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -43,26 +34,8 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="5e13e600e6ffa2448dd8437125780f46341397cb">
+        sha1="fafc2ea7b1cf6a5247ee119196964eab0a69c0c0">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_218170956f2a96d97616a6340e05fd1f75ad41ba\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Haloman\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.0.1\support-annotations-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.0.1_2132ebb5798876ad3ef2f5918e4a74e21f7488ec\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-compat-25.0.1_9bc2ecbd9f3419e34a2193868cc8bff2bd47f66b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -79,26 +52,17 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="67f0b4e4ea4fd72ff50f400a41f02c033e0c809a">
+        sha1="e229da6504b6dc996360d979d57696c5f3e4c733">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ea1bc35d8f840913cb903f51cbc1c23fb710a5cb\classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-core-ui\25.0.1\jars\libs\internal_impl-25.0.1.jar"
+        jar="C:\Users\Haloman\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_88ad82e7579b3084ebd35be4d279590f211559b9\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-compat\25.0.1\jars\libs\internal_impl-25.0.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-25.0.1_d756317854764026249be4c49978ea35a739414b\classes.dex" />
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_d0e95667188bab5126a2d317f280b020d38a1775\classes.dex" />
     </item>
 
 </items>

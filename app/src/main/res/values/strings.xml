@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MyDatabaseExample</string>
+    <string name="textview">TextView</string>
 </resources>
