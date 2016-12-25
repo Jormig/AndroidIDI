@@ -1,10 +1,16 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.widget.EditText;
 
 import java.util.List;
 
@@ -34,9 +40,23 @@ public class ListFilmActivity extends AppCompatActivity {
         mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
         filmData.open();
         String order = MySQLiteHelper.COLUMN_YEAR_RELEASE;
-        order.concat(" DESC");
-        List<Film> myDataset = filmData.getAllFilms(order);
+        List<Film> myDataset = filmData.getAllFilms(order.concat(" DESC"));
         mAdapter = new ListFilmAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
+    }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle item selection
+        switch (item.getItemId()) {
+            case R.id.action_add_item:
+                Intent intent = new Intent(this,PantallaAltaFilmActivity.class);
+                startActivity(intent);
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }
