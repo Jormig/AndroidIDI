@@ -4,10 +4,61 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="TextView"
+        android:text="Titulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView" />
+        android:id="@+id/textTitulo"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/black" />
+
+    <TextView
+        android:text="Pais"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textPais"
+        android:textColorHighlight="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/textTitulo"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:text="Any"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textAny"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:text="Protagonista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textProtagonista"
+        android:textColorHighlight="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/textProtagonista"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="Director"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textDirector"
+        android:textColorHighlight="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/textView4"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:text="NotaCritica"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textNotaCritica"
+        android:textColorHighlight="@android:color/black"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/textNotaCritica"
+        android:layout_alignParentStart="true" />
 
 
 </LinearLayout>

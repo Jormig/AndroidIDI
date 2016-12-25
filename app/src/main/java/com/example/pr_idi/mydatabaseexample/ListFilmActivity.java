@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
+import java.util.List;
+
 /**
  * Created by Haloman on 20/11/2016.
  */
@@ -28,10 +30,12 @@ public class ListFilmActivity extends Activity {
         mRecyclerView.setLayoutManager(mLayoutManager);
 
         // specify an adapter (see also next example)
-        String[] myDataset = new String[2];
-        myDataset[0] = "HELLO";
-        myDataset[1] = "HELLO";
-        mAdapter = new ListFilmAdapter(myDataset,this);
+        FilmData filmData = new FilmData(this);
+        mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
+        filmData.open();
+        List<Film> myDataset = filmData.getAllFilms();
+        filmData.close();
+        mAdapter = new ListFilmAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
     }
 }

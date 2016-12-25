@@ -12,12 +12,30 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\Haloman\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-beta4_b158b7a3d6e7a1173da8619730255b1b9519e443\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_040d140c5f86e357dae5e36e7d85a9d35f20de7d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-beta4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-beta4_11bc5e798b33e4bec8d462468f396ab49a6ea340\classes.dex" />
     </item>
     <item
         is-multidex="true"
