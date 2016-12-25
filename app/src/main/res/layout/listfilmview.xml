@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#f1f1f1"
-    android:padding="5dp"
+    android:padding="0dp"
     tools:context="com.example.pr_idi.mydatabaseexample.ListFilmActivity">
 
     <android.support.v7.widget.RecyclerView

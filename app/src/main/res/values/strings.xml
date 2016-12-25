@@ -1,4 +1,7 @@
 <resources>
-    <string name="app_name">MyDatabaseExample</string>
+    <string name="app_name">Pelis cutres</string>
     <string name="textview">TextView</string>
+    <string name="about">About</string>
+    <string name="crear_pelicula">Crear Pelicula</string>
+    <string name="help">Help</string>
 </resources>

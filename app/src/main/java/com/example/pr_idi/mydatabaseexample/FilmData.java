@@ -88,11 +88,11 @@ public class FilmData {
                 + " = " + id, null);
     }
 
-    public List<Film> getAllFilms() {
+    public List<Film> getAllFilms(String Order) {
         List<Film> comments = new ArrayList<>();
 
         Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
-                allColumns, null, null, null, null, null);
+                allColumns, null, null, null, null, Order);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {

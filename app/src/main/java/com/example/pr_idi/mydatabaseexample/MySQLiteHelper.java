@@ -5,6 +5,7 @@ package com.example.pr_idi.mydatabaseexample;
  * Created by pr_idi on 10/11/16.
  */
 import android.content.Context;
+import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.Cursor;
@@ -85,6 +86,25 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                         + newVersion + ", which will destroy all old data");
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_FILMS);
         onCreate(db);
+    }
+
+    public boolean insertData(SQLiteDatabase database, Film film){
+        try {
+            database.execSQL("INSERT INTO " + TABLE_FILMS + " " +
+                    "(" + COLUMN_TITLE + ", " + COLUMN_COUNTRY + "," +
+                    "" + COLUMN_YEAR_RELEASE + "," + COLUMN_DIRECTOR + ","
+                    + COLUMN_PROTAGONIST + "," + COLUMN_CRITICS_RATE + ") " +
+                    "" +
+                    "values('" + film.getTitle() + "'," +
+                    "'" + film.getCountry() + "'," +
+                    film.getYear() + "," +
+                    "'" + film.getDirector() + "'," +
+                    "'" + film.getProtagonist() + "'," +
+                    film.getCritics_rate() + ");");
+        }catch(SQLException e){
+            return false;
+        }
+        return true;
     }
 
 }

@@ -2,6 +2,7 @@ package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -11,11 +12,10 @@ import java.util.List;
  * Created by Haloman on 20/11/2016.
  */
 
-public class ListFilmActivity extends Activity {
+public class ListFilmActivity extends AppCompatActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
-    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.listfilmview);
@@ -33,8 +33,9 @@ public class ListFilmActivity extends Activity {
         FilmData filmData = new FilmData(this);
         mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
         filmData.open();
-        List<Film> myDataset = filmData.getAllFilms();
-        filmData.close();
+        String order = MySQLiteHelper.COLUMN_YEAR_RELEASE;
+        order.concat(" DESC");
+        List<Film> myDataset = filmData.getAllFilms(order);
         mAdapter = new ListFilmAdapter(myDataset);
         mRecyclerView.setAdapter(mAdapter);
     }

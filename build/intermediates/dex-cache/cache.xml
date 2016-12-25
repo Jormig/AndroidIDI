@@ -52,8 +52,17 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="fafc2ea7b1cf6a5247ee119196964eab0a69c0c0">
+        sha1="4e3996f21f11ea40bbd5478a6b1baf91817ed9be">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_218170956f2a96d97616a6340e05fd1f75ad41ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="24aacb09f391115cc2ba9cf38da425aef7795c8f">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ea1bc35d8f840913cb903f51cbc1c23fb710a5cb\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -63,15 +72,6 @@
         revision="22.0.1"
         sha1="f8efd0096475e0daf054267b61544e10dc776503">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.1_aa11f8da5374ff27ee539678e1c8ad8b05bb9fb4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="e229da6504b6dc996360d979d57696c5f3e4c733">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ea1bc35d8f840913cb903f51cbc1c23fb710a5cb\classes.dex" />
     </item>
     <item
         is-multidex="true"
