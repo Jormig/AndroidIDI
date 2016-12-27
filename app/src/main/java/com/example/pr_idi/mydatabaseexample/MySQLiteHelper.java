@@ -1,0 +1,110 @@
+package com.example.pr_idi.mydatabaseexample;
+
+/**
+ * MySQLiteHelper
+ * Created by pr_idi on 10/11/16.
+ */
+import android.content.Context;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.database.Cursor;
+import android.util.Log;
+
+import java.util.ArrayList;
+
+public class MySQLiteHelper extends SQLiteOpenHelper {
+
+    public static final String TABLE_FILMS = "films";
+    public static final String COLUMN_ID = "_id";
+    public static final String COLUMN_TITLE = "title";
+    public static final String COLUMN_COUNTRY = "country";
+    public static final String COLUMN_YEAR_RELEASE = "year_release";
+    public static final String COLUMN_DIRECTOR = "director";
+    public static final String COLUMN_PROTAGONIST = "protagonist";
+    public static final String COLUMN_CRITICS_RATE = "critics_rate";
+
+    private static final String DATABASE_NAME = "films.db";
+    private static final int DATABASE_VERSION = 5;
+
+    // Database creation sql statement
+    private static final String DATABASE_CREATE = "create table " + TABLE_FILMS + "( "
+            + COLUMN_ID + " integer primary key autoincrement, "
+            + COLUMN_TITLE + " text not null, "
+            + COLUMN_COUNTRY + " text not null, "
+            + COLUMN_YEAR_RELEASE + " integer not null, "
+            + COLUMN_DIRECTOR + " text not null, "
+            + COLUMN_PROTAGONIST + " text not null, "
+            + COLUMN_CRITICS_RATE + " integer"
+            + ");";
+
+    public MySQLiteHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+    }
+
+    @Override
+    public void onCreate(SQLiteDatabase database) {
+        database.execSQL(DATABASE_CREATE);
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+                "values('El ataque de los tomates asesinos'," +
+                "'Estados Unidos de America'," +
+                "1986," +
+                "'Algun tio Director'," +
+                "'Algun otro tio Actor'," +
+                "1);");
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+                "" +
+                "values('El ataque de los tomates asesinos 2'," +
+                "'Estados Unidos de America'," +
+                "1987," +
+                "'Algun Director'," +
+                "'Alguna Actor'," +
+                "5);");
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+                "" +
+                "values('Breakdance 2: Electic Boogaloo'," +
+                "'Estados Unidos de America'," +
+                "1984," +
+                "'Sam Fistenberg Director'," +
+                "'Alguien Actor'," +
+                "4);");
+    }
+
+    @Override
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        Log.w(MySQLiteHelper.class.getName(),
+                "Upgrading database from version " + oldVersion + " to "
+                        + newVersion + ", which will destroy all old data");
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_FILMS);
+        onCreate(db);
+    }
+
+    public boolean insertData(SQLiteDatabase database, Film film){
+        try {
+            database.execSQL("INSERT INTO " + TABLE_FILMS + " " +
+                    "(" + COLUMN_TITLE + ", " + COLUMN_COUNTRY + "," +
+                    "" + COLUMN_YEAR_RELEASE + "," + COLUMN_DIRECTOR + ","
+                    + COLUMN_PROTAGONIST + "," + COLUMN_CRITICS_RATE + ") " +
+                    "" +
+                    "values('" + film.getTitle() + "'," +
+                    "'" + film.getCountry() + "'," +
+                    film.getYear() + "," +
+                    "'" + film.getDirector() + "'," +
+                    "'" + film.getProtagonist() + "'," +
+                    film.getCritics_rate() + ");");
+        }catch(SQLException e){
+            return false;
+        }
+        return true;
+    }
+
+}
