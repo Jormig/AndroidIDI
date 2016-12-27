@@ -3,6 +3,7 @@
 
     <item
         is-multidex="true"
+<<<<<<< HEAD
         jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI-master\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -40,10 +41,23 @@
     <item
         is-multidex="true"
         jar="C:\Users\adela\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
+=======
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\libs\internal_impl-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-22.2.1_8b7dbcac1f806294329fc8869807806a9619a199\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
+>>>>>>> 0156792a01e8ab1f9097cba32894dd6101015cdf
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
         sha1="0a9cb567dc008f570c28531720168f19148da965">
+<<<<<<< HEAD
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-beta4_27917478ec5e1d4a144cd325da88cf424af2be48\classes.dex" />
     </item>
     <item
@@ -117,6 +131,72 @@
         revision="22.0.1"
         sha1="18d0a1e0a47c8d9f440b9797e9f0f8f67fe11dcb">
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI-master\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_66e3169632bfede23f5cdcd46f12b4a910f2ad8f\classes.dex" />
+=======
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.0-beta4_b158b7a3d6e7a1173da8619730255b1b9519e443\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_040d140c5f86e357dae5e36e7d85a9d35f20de7d\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-beta4\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-beta4_11bc5e798b33e4bec8d462468f396ab49a6ea340\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="c6d79137693d494dee16372d3921f919eb724ced">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.0.0_9c792883304922f4c39eaa68c4a1dde247f10cc0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4e3996f21f11ea40bbd5478a6b1baf91817ed9be">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_218170956f2a96d97616a6340e05fd1f75ad41ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="14a02d593e0864b6375e157cee5389b7b1a702aa">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ea1bc35d8f840913cb903f51cbc1c23fb710a5cb\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="f8efd0096475e0daf054267b61544e10dc776503">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-22.2.1_aa11f8da5374ff27ee539678e1c8ad8b05bb9fb4\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.1\support-annotations-22.2.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="61a0ff5c29295ec56d7e0bd3d25d95dbf71b4b2b">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-22.2.1_d0e95667188bab5126a2d317f280b020d38a1775\classes.dex" />
+>>>>>>> 0156792a01e8ab1f9097cba32894dd6101015cdf
     </item>
 
 </items>
