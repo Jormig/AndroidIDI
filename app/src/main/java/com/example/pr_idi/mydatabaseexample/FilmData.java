@@ -14,6 +14,9 @@ import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 
+import static android.R.attr.country;
+import static android.R.attr.data;
+
 public class FilmData {
 
     // Database fields
@@ -43,25 +46,24 @@ public class FilmData {
         dbHelper.close();
     }
 
-    public Film createFilm(String title, String director) {
+
+    public Film createFilm(Film film) {
         ContentValues values = new ContentValues();
-        Log.d("Creating", "Creating " + title + " " + director);
+        Log.d("Creating", "Creating " + film.getTitle() + " " + film.getDirector() + " " + String.valueOf(film.getYear()));
 
         // Add data: Note that this method only provides title and director
         // Must modify the method to add the full data
-        values.put(MySQLiteHelper.COLUMN_TITLE, title);
-        values.put(MySQLiteHelper.COLUMN_DIRECTOR, director);
+        values.put(MySQLiteHelper.COLUMN_TITLE, film.getTitle());
+        values.put(MySQLiteHelper.COLUMN_DIRECTOR, film.getDirector());
 
         // Invented data
-        values.put(MySQLiteHelper.COLUMN_COUNTRY, "Catalonia");
-        values.put(MySQLiteHelper.COLUMN_YEAR_RELEASE, 2014);
-        values.put(MySQLiteHelper.COLUMN_PROTAGONIST, "Do not know");
-        values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, 5);
+        values.put(MySQLiteHelper.COLUMN_COUNTRY, film.getCountry());
+        values.put(MySQLiteHelper.COLUMN_YEAR_RELEASE, film.getYear());
+        values.put(MySQLiteHelper.COLUMN_PROTAGONIST, film.getProtagonist());
+        values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, film.getCritics_rate());
 
         // Actual insertion of the data using the values variable
-        long insertId = database.insert(MySQLiteHelper.TABLE_FILMS, null,
-                values);
-
+        long insertId = database.insert(MySQLiteHelper.TABLE_FILMS, null, values);
         // Main activity calls this procedure to create a new film
         // and uses the result to update the listview.
         // Therefore, we need to get the data from the database

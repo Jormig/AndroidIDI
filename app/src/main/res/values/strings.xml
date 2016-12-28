@@ -4,7 +4,7 @@
     <string name="about">About</string>
     <string name="crear_pelicula">Crear Pelicula</string>
     <string name="help">Help</string>
-<<<<<<< HEAD
+    <string name="borrar_pelicula">Borrar Pelicula</string>
 
     <string name="drawer_open">Open navigation drawer</string>
     <string name="drawer_close">Close navigation drawer</string>
@@ -17,7 +17,4 @@
     <string name="drag_menu5">MENU5</string>
     <string name="drag_menu6">Configuración</string>
     <string name="drag_menu7">MENU7</string>
-
-=======
->>>>>>> 0156792a01e8ab1f9097cba32894dd6101015cdf
 </resources>

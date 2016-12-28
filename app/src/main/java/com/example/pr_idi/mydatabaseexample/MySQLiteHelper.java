@@ -88,23 +88,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
         onCreate(db);
     }
 
-    public boolean insertData(SQLiteDatabase database, Film film){
-        try {
-            database.execSQL("INSERT INTO " + TABLE_FILMS + " " +
-                    "(" + COLUMN_TITLE + ", " + COLUMN_COUNTRY + "," +
-                    "" + COLUMN_YEAR_RELEASE + "," + COLUMN_DIRECTOR + ","
-                    + COLUMN_PROTAGONIST + "," + COLUMN_CRITICS_RATE + ") " +
-                    "" +
-                    "values('" + film.getTitle() + "'," +
-                    "'" + film.getCountry() + "'," +
-                    film.getYear() + "," +
-                    "'" + film.getDirector() + "'," +
-                    "'" + film.getProtagonist() + "'," +
-                    film.getCritics_rate() + ");");
-        }catch(SQLException e){
-            return false;
-        }
-        return true;
-    }
+
 
 }

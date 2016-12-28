@@ -231,7 +231,6 @@ public class BaseActivity extends AppCompatActivity {
 
 
 
-
         return super.onCreateOptionsMenu(menu);
     }
 

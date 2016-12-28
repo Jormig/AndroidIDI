@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidIDI-master.iml" filepath="$PROJECT_DIR$/AndroidIDI-master.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidIDI.iml" filepath="$PROJECT_DIR$/AndroidIDI.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

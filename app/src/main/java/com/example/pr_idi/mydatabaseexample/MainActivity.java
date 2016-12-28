@@ -6,6 +6,7 @@ import java.util.Random;
 
 import android.app.ListActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 
@@ -40,7 +41,10 @@ public class MainActivity extends ListActivity {
                 String[] newFilm = new String[] { "Blade Runner", "Ridley Scott", "Rocky Horror Picture Show", "Jim Sharman", "The Godfather", "Francis Ford Coppola", "Toy Story", "John Lasseter" };
                 int nextInt = new Random().nextInt(4);
                 // save the new film to the database
-                film = filmData.createFilm(newFilm[nextInt*2], newFilm[nextInt*2 + 1]);
+                    film = new Film();
+                    film.setTitle(newFilm[nextInt*2]);
+                    film.setDirector(newFilm[nextInt*2 + 1]);
+                film = filmData.createFilm(film);
                 adapter.add(film);
                 break;
             case R.id.delete:
