@@ -3,6 +3,7 @@ package com.example.pr_idi.mydatabaseexample;
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.util.SparseBooleanArray;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -25,6 +26,8 @@ public class ListFilmAdapter extends RecyclerView.Adapter<ListFilmAdapter.ViewHo
     private List<Film> mDataset;
     private Context ctxt;
     private View v;
+    private SparseBooleanArray mSelectedPositions = new SparseBooleanArray();
+    private boolean mIsSelectable = false;
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
@@ -79,24 +82,26 @@ public class ListFilmAdapter extends RecyclerView.Adapter<ListFilmAdapter.ViewHo
         v = (TextView)holder.mView.findViewById(R.id.textNotaCritica);
         v.setText(String.valueOf(film.getCritics_rate()).concat("/10"));
 
-        this.v.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-        /*this.v.setOnTouchListener(new View.OnTouchListener() {
-            @Override
-            public boolean onTouch(View v, MotionEvent event) {
-                v.startAnimation(AnimationUtils.loadAnimation(v.getContext(), R.anim.image_click));
-                return false;
-            }
-        });*/
     }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return mDataset.size();
+    }
+    private void setItemChecked(int position, boolean isChecked) {
+        mSelectedPositions.put(position, isChecked);
+    }
+
+    private boolean isItemChecked(int position) {
+        return mSelectedPositions.get(position);
+    }
+
+    private void setSelectable(boolean selectable) {
+        mIsSelectable = selectable;
+    }
+
+    private boolean isSelectable() {
+        return mIsSelectable;
     }
 }
