@@ -39,21 +39,21 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.0.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="c6d79137693d494dee16372d3921f919eb724ced">
-        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.0.0_9c792883304922f4c39eaa68c4a1dde247f10cc0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="a024bac454da04b1fadc97d7d03074bc061b2b1f">
+        sha1="71de9af22e6c5011a641945d8ddecfc04b405235">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_218170956f2a96d97616a6340e05fd1f75ad41ba\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-22.1.1_67e6d557c506f287a0d2f3c4107d99f3cb83c9ec\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -63,6 +63,15 @@
         revision="22.0.1"
         sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\internal_impl-23.0.0_f19125fe235202f5077f6ee73cc14b0aaf7cdb56\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\exploded-aar\com.bignerdranch.android\recyclerview-multiselect\0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8a90606ee73178bb9b1a336dc36ae3ec25ad33ea">
+        <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.bignerdranch.android-recyclerview-multiselect-0.2_5ccf6f941c2f011e1aadde9ddd581bc906c4004f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -106,7 +115,7 @@
         jumboMode="true"
         optimize="true"
         revision="22.0.1"
-        sha1="896baf8ea237434cd688c6ccdd723c2e3e06b2ca">
+        sha1="740f0f86bdd394e3e391f60553d9b374daadcda6">
         <dex dex="C:\Users\Haloman\AndroidStudioProjects\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ea1bc35d8f840913cb903f51cbc1c23fb710a5cb\classes.dex" />
     </item>
     <item

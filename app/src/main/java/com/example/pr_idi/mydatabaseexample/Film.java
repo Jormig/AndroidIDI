@@ -16,6 +16,7 @@ public class Film {
     private int year;
     private String protagonist;
     private int critics_rate;
+    private boolean isSelected = false;
 
     private String comment;
 
@@ -79,5 +80,13 @@ public class Film {
     @Override
     public String toString() {
         return String.format("%s - %s", title, director);
+    }
+
+    public void setSelected(boolean selected) {
+        isSelected = selected;
+    }
+
+    public boolean isSelected() {
+        return isSelected;
     }
 }

@@ -1,6 +1,7 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.util.SparseBooleanArray;
@@ -14,9 +15,6 @@ import android.widget.TextView;
 import java.io.Console;
 import java.util.List;
 
-import static android.R.attr.clickable;
-import static android.R.attr.id;
-import static android.media.CamcorderProfile.get;
 
 /**
  * Created by Haloman on 20/11/2016.
@@ -26,8 +24,6 @@ public class ListFilmAdapter extends RecyclerView.Adapter<ListFilmAdapter.ViewHo
     private List<Film> mDataset;
     private Context ctxt;
     private View v;
-    private SparseBooleanArray mSelectedPositions = new SparseBooleanArray();
-    private boolean mIsSelectable = false;
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
     // you provide access to all the views for a data item in a view holder
@@ -41,8 +37,9 @@ public class ListFilmAdapter extends RecyclerView.Adapter<ListFilmAdapter.ViewHo
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public ListFilmAdapter(List<Film> myDataset) {
+    public ListFilmAdapter(List<Film> myDataset, Context ctxt) {
         mDataset = myDataset;
+        this.ctxt = ctxt;
     }
 
     // Create new views (invoked by the layout manager)
@@ -82,26 +79,31 @@ public class ListFilmAdapter extends RecyclerView.Adapter<ListFilmAdapter.ViewHo
         v = (TextView)holder.mView.findViewById(R.id.textNotaCritica);
         v.setText(String.valueOf(film.getCritics_rate()).concat("/10"));
 
-    }
+        holder.mView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(ListFilmActivity.getDeleteMode()) {
+                    film.setSelected(!film.isSelected());
+                    v.setBackgroundColor(film.isSelected() ? Color.CYAN : Color.WHITE);
+                }
+            }
+        });
+        holder.mView.setOnLongClickListener(new View.OnLongClickListener(){
+            @Override
+            public boolean onLongClick(View v) {
+                ((ListFilmActivity)ctxt).invalidateOptionsMenu();
+                Log.d("TAG",String.valueOf(ListFilmActivity.getDeleteMode()));
+                ListFilmActivity.setDeleteMode();
+                return false;
+            }
+        });
+
+      }
 
     // Return the size of your dataset (invoked by the layout manager)
     @Override
     public int getItemCount() {
         return mDataset.size();
     }
-    private void setItemChecked(int position, boolean isChecked) {
-        mSelectedPositions.put(position, isChecked);
-    }
 
-    private boolean isItemChecked(int position) {
-        return mSelectedPositions.get(position);
-    }
-
-    private void setSelectable(boolean selectable) {
-        mIsSelectable = selectable;
-    }
-
-    private boolean isSelectable() {
-        return mIsSelectable;
-    }
 }
