@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.ActionMode;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -25,6 +26,7 @@ public class ListFilmActivity extends AppCompatActivity {
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Film> myDataset;
+    private FilmData myFilmData;
     private static boolean deleteMode = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,33 +48,18 @@ public class ListFilmActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         // specify an adapter (see also next example)
-        FilmData filmData = new FilmData(this);
+        myFilmData = new FilmData(this);
         mRecyclerView.addItemDecoration(new SimpleDividerItemDecoration(this));
-        filmData.open();
+        myFilmData.open();
         String order = MySQLiteHelper.COLUMN_YEAR_RELEASE;
-        myDataset = filmData.getAllFilms(order.concat(" DESC"));
+        myDataset = myFilmData.getAllFilms(order.concat(" DESC"));
         mAdapter = new ListFilmAdapter(myDataset,this);
         mRecyclerView.setAdapter(mAdapter);
-
-        mRecyclerView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Log.d("TAG","ASD");
-                v.setBackgroundColor(Color.BLACK);
-            }
-        });
-
     }
     @Override
-    public boolean onPrepareOptionsMenu(Menu menu) {
-        menu.clear();
-        if (deleteMode){
-            MenuInflater inflater = getMenuInflater();
-            inflater.inflate(R.menu.menu_delete_items, menu);
-        }else{
-            MenuInflater inflater = getMenuInflater();
-            inflater.inflate(R.menu.menulistapelis, menu);
-        }
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menulistapelis, menu);
         return super.onPrepareOptionsMenu(menu);
     }
     @Override
@@ -95,6 +82,12 @@ public class ListFilmActivity extends AppCompatActivity {
             default:
                 return super.onOptionsItemSelected(item);
         }
+    }
+    public FilmData getMyFilmData(){
+        return myFilmData;
+    }
+    public List<Film> getMyDataset(){
+        return myDataset;
     }
     public static void setDeleteMode(){
         deleteMode = !deleteMode;
