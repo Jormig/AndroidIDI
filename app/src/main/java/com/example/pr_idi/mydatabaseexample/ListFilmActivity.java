@@ -65,9 +65,10 @@ public class ListFilmActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle item selection
+        Intent intent;
         switch (item.getItemId()) {
             case R.id.action_add_item:
-                Intent intent = new Intent(this, PantallaAltaFilmActivity.class);
+                intent = new Intent(this, PantallaAltaFilmActivity.class);
                 startActivity(intent);
             return true;
             case R.id.action_delete_item:
@@ -78,6 +79,10 @@ public class ListFilmActivity extends AppCompatActivity {
                     }
                 }
                 Log.d("TAG","Output : " + text);
+            return true;
+            case R.id.action_about:
+                intent = new Intent(this, About.class);
+                startActivity(intent);
             return true;
             default:
                 return super.onOptionsItemSelected(item);
