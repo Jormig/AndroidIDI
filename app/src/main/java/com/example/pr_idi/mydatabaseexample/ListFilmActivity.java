@@ -21,7 +21,7 @@ import static android.graphics.Color.BLACK;
  * Created by Haloman on 20/11/2016.
  */
 
-public class ListFilmActivity extends AppCompatActivity {
+public class ListFilmActivity extends BaseActivity {
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
@@ -31,7 +31,8 @@ public class ListFilmActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.listfilmview);
+        //setContentView(R.layout.listfilmview);
+        super.onCreateDraweron(R.layout.listfilmview);
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
 
         // use this setting to improve performance if you know that changes

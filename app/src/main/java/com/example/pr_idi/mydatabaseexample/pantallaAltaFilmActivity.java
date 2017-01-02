@@ -17,11 +17,11 @@ import static android.R.id.edit;
  * Created by Haloman on 25/12/2016.
  */
 
-public class PantallaAltaFilmActivity extends AppCompatActivity {
+public class PantallaAltaFilmActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pantallaaltafilm);
-
+        //setContentView(R.layout.pantallaaltafilm);
+        super.onCreateDraweron(R.layout.pantallaaltafilm);
         EditText et = (EditText) findViewById(R.id.editNotaCritica);
         et.setFilters(new InputFilter[]{new InputFilterMinMax(0, 10)});
     }

@@ -11,13 +11,13 @@
     <string name="drawer_close" translatable="false">Close navigation drawer</string>
     <string name="search" translatable="false">Search</string>
     <string name="drag_title" translatable="false">Films</string>
-    <string name="drag_menu1" translatable="false">Home</string>
-    <string name="drag_menu2">Añadir Film</string>
-    <string name="drag_menu3" translatable="false">MENU3</string>
-    <string name="drag_menu4" translatable="false">MENU4</string>
-    <string name="drag_menu5" translatable="false">MENU5</string>
+    <string name="drag_menu1" translatable="false">Títulos</string>
+    <string name="drag_menu2">Librería</string>
+    <string name="drag_menu3" translatable="false">Añadir Film</string>
+    <string name="drag_menu4" translatable="false">Eliminar</string>
+    <string name="drag_menu5" translatable="false">Buscar</string>
     <string name="drag_menu6">Configuración</string>
-    <string name="drag_menu7" translatable="false">MENU7</string>
+    <string name="drag_menu7" translatable="false">Salir</string>
     <string name="versi_n_de_la_aplicaci_n">Versión de la aplicación</string>
     <string name="versionids">1.0</string>
 </resources>
