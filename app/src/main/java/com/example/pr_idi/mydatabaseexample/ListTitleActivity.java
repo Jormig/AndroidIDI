@@ -3,9 +3,11 @@ package com.example.pr_idi.mydatabaseexample;
 import android.app.Dialog;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
 import android.text.InputFilter;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
@@ -52,9 +54,10 @@ public class ListTitleActivity extends BaseActivity {
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final int puntajeIni;
                 final int pos = position;
-                // TODO
                 final Dialog rankDialog;
+                final View fview = view;
                 final RatingBar ratingBar;
                 final Film filme = myDataset.get(pos);
                 rankDialog = new Dialog(ListTitleActivity.this, R.style.FullHeightDialog);
@@ -66,8 +69,9 @@ public class ListTitleActivity extends BaseActivity {
                 TextView text = (TextView) rankDialog.findViewById(R.id.rank_title);
                 text.setText(filme.getTitle());
 
+                puntajeIni = filme.getCritics_rate();
                 final TextView rate = (TextView) rankDialog.findViewById(R.id.rate_dialog);
-                rate.setText(String.valueOf(filme.getCritics_rate()+"/10"));
+                rate.setText(String.valueOf(puntajeIni+"/10"));
 
                 ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
                     public void onRatingChanged(RatingBar ratingBar, float rating,
@@ -91,6 +95,27 @@ public class ListTitleActivity extends BaseActivity {
                         filmData.updateRating(rating,filme.getId() );
                         filmData.close();
                         reloadAllData();
+
+
+
+                        Snackbar.make(fview, "Calificación cambiada", Snackbar.LENGTH_LONG)
+                                //.setActionTextColor(Color.CYAN)
+                                .setActionTextColor(getResources().getColor(R.color.snackbar_action))
+                                .setAction("DESHACER", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Log.i("Snackbar", "Pulsada acción snackbar!");
+                                        MySQLiteHelper  dbHelper = new MySQLiteHelper(ListTitleActivity.this);
+                                        FilmData filmData = new FilmData(ListTitleActivity.this);
+                                        filmData.open();
+                                        filmData.updateRating(puntajeIni,filme.getId() );
+                                        filmData.close();
+                                        reloadAllData();
+
+                                    }
+                                })
+                                .setDuration(100000).show();
+
                         rankDialog.dismiss();
                     }
                 });

@@ -1,8 +1,10 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Dialog;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -40,11 +42,13 @@ public class ListCalificarActivity extends BaseActivity {
             @Override
             public void onItemClick(AdapterView<?> listView, View itemView, int index,
                                     long id) {
+                final int puntajeIni;
                 final int pos = index;
-                // TODO
+                final View fview = itemView;
                 final Dialog rankDialog;
                 final RatingBar ratingBar;
                 final Film filme = myDataset.get(pos);
+                puntajeIni = filme.getCritics_rate();
                 rankDialog = new Dialog(ListCalificarActivity.this, R.style.FullHeightDialog);
                 rankDialog.setContentView(R.layout.dialog_rating);
                 rankDialog.setCancelable(true);
@@ -79,6 +83,23 @@ public class ListCalificarActivity extends BaseActivity {
                         filmData.updateRating(rating,filme.getId() );
                         filmData.close();
                         reloadAllData();
+                        Snackbar.make(fview, "Calificación cambiada", Snackbar.LENGTH_LONG)
+                                //.setActionTextColor(Color.CYAN)
+                                .setActionTextColor(getResources().getColor(R.color.snackbar_action))
+                                .setAction("DESHACER", new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        Log.i("Snackbar", "Pulsada acción snackbar!");
+                                        MySQLiteHelper  dbHelper = new MySQLiteHelper(ListCalificarActivity.this);
+                                        FilmData filmData = new FilmData(ListCalificarActivity.this);
+                                        filmData.open();
+                                        filmData.updateRating(puntajeIni,filme.getId() );
+                                        filmData.close();
+                                        reloadAllData();
+
+                                    }
+                                })
+                                .setDuration(100000).show();
                         rankDialog.dismiss();
                     }
                 });
