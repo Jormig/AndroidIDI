@@ -158,6 +158,9 @@ public class BaseActivity extends AppCompatActivity {
             case "PantallaAltaFilmActivity":
                 navigationView.getMenu().getItem(2).setChecked(true);
                 break;
+            case "ListCalificarActivity":
+                navigationView.getMenu().getItem(5).setChecked(true);
+                break;
         }
     }
 
@@ -170,7 +173,7 @@ public class BaseActivity extends AppCompatActivity {
         Intent intent = null;
         String activity = this.getClass().getSimpleName();
         switch (item.getItemId()) {
-            case R.id.nav_home:
+            case R.id.nav_home: //Titulos
                 if (!activity.equals("ListTitleActivity")) {
                     intent = new Intent(this, ListTitleActivity.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -180,25 +183,32 @@ public class BaseActivity extends AppCompatActivity {
                 break;
 
 
-            case R.id.nav_1:
+            case R.id.nav_1: // Todos los Datos
                 if (!activity.equals("ListFilmActivity")) {
                     intent = new Intent(this, ListFilmActivity.class);
                     startActivity(intent);
                 }
                 break;
 
-            case R.id.nav_2:
+            case R.id.nav_2: //Añadir
                 if (!activity.equals("PantallaAltaFilmActivity")) {
                     intent = new Intent(this, PantallaAltaFilmActivity.class);
                     startActivity(intent);
                 }
                 break;
 
-            case R.id.nav_3:
+            case R.id.nav_3: //Borrar
                /* if (!activity.equals("EraserActivity")) {
                     intent = new Intent(this, EraserActivity.class);
                     startActivity(intent);
                 }*/
+                break;
+
+            case R.id.nav_8: //Calificar
+                if (!activity.equals("ListCalificarActivity")) {
+                    intent = new Intent(this, ListCalificarActivity.class);
+                    startActivity(intent);
+                }
                 break;
             case R.id.nav_exit:
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
@@ -241,6 +251,12 @@ public class BaseActivity extends AppCompatActivity {
             case R.id.action_add_item:
                 Intent intent = new Intent(this, PantallaAltaFilmActivity.class);
                 startActivity(intent);
+                return true;
+
+            case R.id.action_about:
+                intent = new Intent(this, About.class);
+                startActivity(intent);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }

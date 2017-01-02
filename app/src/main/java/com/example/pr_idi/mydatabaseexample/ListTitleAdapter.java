@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -35,7 +36,7 @@ public class ListTitleAdapter  extends BaseAdapter  {
         items.clear();
     }
 
-    public void addAll(ArrayList<Film> category) {
+    public void addAll(List<Film> category) {
         for (int i = 0; i < category.size(); i++) {
             items.add(category.get(i));
         }
@@ -51,6 +52,8 @@ public class ListTitleAdapter  extends BaseAdapter  {
         return position;
     }
 
+
+
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
@@ -60,6 +63,8 @@ public class ListTitleAdapter  extends BaseAdapter  {
             LayoutInflater inf = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
             v = inf.inflate(R.layout.item_title, null);
         }
+
+
 
         Film dir = items.get(position);
         String stitle = dir.getTitle();

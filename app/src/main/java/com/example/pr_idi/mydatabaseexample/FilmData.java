@@ -47,6 +47,15 @@ public class FilmData {
     }
 
 
+    public void updateRating(int rate,long id){
+
+        ContentValues values = new ContentValues();
+        values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, rate);
+
+        database.update(MySQLiteHelper.TABLE_FILMS,values, MySQLiteHelper.COLUMN_ID+"="+id,null );
+    }
+
+
     public Film createFilm(Film film) {
         ContentValues values = new ContentValues();
         Log.d("Creating", "Creating " + film.getTitle() + " " + film.getDirector() + " " + String.valueOf(film.getYear()));
