@@ -23,7 +23,7 @@ android:background="@color/window_background"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="Titulo Frase"
         android:id="@+id/category"
-        android:textSize="21sp"
+        android:textSize="19sp"
         android:textColor="#0c1a3d"
             android:layout_marginLeft="4dp"
             android:layout_marginRight="4dp"
@@ -47,7 +47,7 @@ android:background="@color/window_background"
             android:layout_toRightOf="@+id/imageView4"
             android:layout_toEndOf="@+id/imageView4"
             android:layout_weight="1"
-            android:textSize="16sp" />
+            android:textSize="15sp" />
 
         <LinearLayout
             android:orientation="horizontal"

@@ -18,6 +18,7 @@
     <string name="drag_menu5" translatable="false">Buscar</string>
     <string name="drag_menu6">Configuración</string>
     <string name="drag_menu7" translatable="false">Salir</string>
+    <string name="drag_menu8" translatable="false">Calificar</string>
     <string name="versi_n_de_la_aplicaci_n">Versión de la aplicación</string>
     <string name="versionids">1.0</string>
 </resources>

@@ -271,10 +271,7 @@ public class BaseActivity extends AppCompatActivity {
             }
         });
 
-        if (!drawerLayout.isDrawerOpen(GravityCompat.START)) {
-            getMenuInflater().inflate(R.menu.menu, menu);
-            return true;
-        }
+
 
 
         return super.onCreateOptionsMenu(menu);

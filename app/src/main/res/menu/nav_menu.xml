@@ -5,24 +5,30 @@
         <item
             android:id="@+id/nav_home"
 
-            android:icon="@android:drawable/ic_dialog_info"
+            android:icon="@drawable/ic_action_theaters"
             android:title="@string/drag_menu1" />
         <item
             android:id="@+id/nav_1"
-            android:icon="@android:drawable/ic_dialog_info"
+            android:icon="@drawable/ic_action_list"
             android:title="@string/drag_menu2"/>
         <item
             android:id="@+id/nav_2"
-            android:icon="@android:drawable/ic_dialog_info"
+            android:icon="@drawable/ic_content_add_box"
             android:title="@string/drag_menu3" />
         <item
             android:id="@+id/nav_3"
-            android:icon="@android:drawable/ic_dialog_info"
+            android:icon="@drawable/ic_action_delete"
             android:title="@string/drag_menu4"/>
         <item
-            android:id="@+id/nav_4"
-            android:icon="@android:drawable/ic_dialog_info"
-            android:title="@string/drag_menu5"/>
+        android:id="@+id/nav_4"
+        android:icon="@drawable/ic_action_search"
+        android:title="@string/drag_menu5"/>
+
+        <item
+            android:id="@+id/nav_8"
+            android:icon="@drawable/ic_maps_local_attraction"
+            android:title="@string/drag_menu8"/>
+
 
         <!-- Sección de configuración -->
         <item
@@ -31,7 +37,7 @@
             <menu>
                 <item
                     android:id="@+id/nav_exit"
-                    android:icon="@android:drawable/ic_dialog_info"
+                    android:icon="@drawable/ic_action_exit_to_app"
                     android:title="@string/drag_menu7" />
             </menu>
         </item>
