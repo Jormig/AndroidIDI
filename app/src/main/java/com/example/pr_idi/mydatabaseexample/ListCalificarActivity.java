@@ -99,7 +99,7 @@ public class ListCalificarActivity extends BaseActivity {
 
                                     }
                                 })
-                                .setDuration(100000).show();
+                                .show();
                         rankDialog.dismiss();
                     }
                 });

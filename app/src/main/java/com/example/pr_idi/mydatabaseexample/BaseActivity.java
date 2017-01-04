@@ -154,7 +154,7 @@ public class BaseActivity extends AppCompatActivity {
                         // Marcar item presionado
                         //menuItem.setChecked(true);
                         // Crear nuevo fragmento
-                        String title = menuItem.getTitle().toString();
+                       // String title = menuItem.getTitle().toString();
 
                         selectItem(menuItem);
                         return true;

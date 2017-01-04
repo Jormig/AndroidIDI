@@ -116,6 +116,23 @@ public class FilmData {
         return comments;
     }
 
+    public List<Film> getAllActors(String Order) {
+        List<Film> comments = new ArrayList<>();
+
+        Cursor cursor = database.query(true, MySQLiteHelper.TABLE_FILMS,
+                allColumns, null, null, MySQLiteHelper.COLUMN_PROTAGONIST, null, Order,null);
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Film comment = cursorToFilm(cursor);
+            comments.add(comment);
+            cursor.moveToNext();
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return comments;
+    }
+
+
     public  List<Film> getFilmsfromActor(String actor){
         List<Film> comments = new ArrayList<>();
         String Order = MySQLiteHelper.COLUMN_TITLE;

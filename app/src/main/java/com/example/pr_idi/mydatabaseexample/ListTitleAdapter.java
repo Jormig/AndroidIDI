@@ -42,6 +42,7 @@ public class ListTitleAdapter  extends BaseAdapter  {
         }
     }
 
+
     @Override
     public Object getItem(int arg0) {
         return items.get(arg0);
@@ -68,7 +69,8 @@ public class ListTitleAdapter  extends BaseAdapter  {
 
         Film dir = items.get(position);
         String stitle = dir.getTitle();
-        String capTitle = stitle.substring(0, 1).toUpperCase() + stitle.substring(1);
+        String capTitle = capitalizeAllWords(stitle);
+                // = stitle.substring(0, 1).toUpperCase() + stitle.substring(1);
 
         TextView title = (TextView) v.findViewById(R.id.category);
         title.setText(capTitle);
@@ -81,5 +83,21 @@ public class ListTitleAdapter  extends BaseAdapter  {
 
 
         return v;
+    }
+
+    private static String capitalizeAllWords(String str) {
+        String phrase = "";
+        boolean capitalize = true;
+        for (char c : str.toLowerCase().toCharArray()) {
+            if (Character.isLetter(c) && capitalize) {
+                phrase += Character.toUpperCase(c);
+                capitalize = false;
+                continue;
+            } else if (c == ' ') {
+                capitalize = true;
+            }
+            phrase += c;
+        }
+        return phrase;
     }
 }

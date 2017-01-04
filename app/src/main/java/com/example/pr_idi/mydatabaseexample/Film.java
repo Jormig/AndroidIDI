@@ -89,4 +89,6 @@ public class Film {
     public boolean isSelected() {
         return isSelected;
     }
+
+
 }
