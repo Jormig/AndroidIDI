@@ -33,6 +33,7 @@
     <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
 
     <string name="title_rating" translatable="false">Calificar</string>
+    <string name="busquedaVacia" translatable="false">No hay protagonista con el nombre buscado.</string>
     <string name="search_label">buscar actor o actriz ...</string>
     <string name="search_hint">buscar actor o actriz ...</string>
     <string name="settings_description">buscar actor o actriz ...</string>

@@ -57,7 +57,9 @@ public class SearchResultActivity extends AppCompatActivity {
         lv.setAdapter(adapter);
         setTitle(capitalizeAllWords(query));
         myFilmData.close();
-    }
+
+       if (myDataset.size()<=0) lv.setEmptyView(findViewById(R.id.busquedaVacia));
+   }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

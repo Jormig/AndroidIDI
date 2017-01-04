@@ -6,16 +6,20 @@
     android:layout_height="match_parent">
 
 
+    <TextView
+        android:id="@+id/busquedaVacia"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="@string/busquedaVacia"
+        android:visibility="gone"
+        android:padding="40dp" />
+
     <ListView
         android:id="@+id/listview_searchresult_layout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-
-
-       />
-
+        android:layout_alignParentStart="true" />
 
 
 </RelativeLayout>
