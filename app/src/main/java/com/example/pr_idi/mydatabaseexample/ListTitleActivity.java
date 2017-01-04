@@ -1,14 +1,24 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Dialog;
+import android.app.SearchManager;
+import android.app.SearchableInfo;
+import android.content.Context;
+import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.text.InputFilter;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -31,14 +41,12 @@ public class ListTitleActivity extends BaseActivity {
     private ListView lv;
     private FilmData filmData;
     private ListTitleAdapter adapter;
+    private  String from = null;
 
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.onCreateDraweron(R.layout.list_titles);
-
-
-
     }
 
     protected void onResume() {
@@ -114,7 +122,7 @@ public class ListTitleActivity extends BaseActivity {
 
                                     }
                                 })
-                                .setDuration(100000).show();
+                                .show();
 
                         rankDialog.dismiss();
                     }
@@ -138,6 +146,46 @@ public class ListTitleActivity extends BaseActivity {
         adapter.addAll(myDataset);
         adapter.notifyDataSetChanged();
         myFilmData.close();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
+        searchView.setSearchableInfo(searchableInfo);
+
+
+
+
+
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                // perform query here
+
+                Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
+                intent.putExtra("query",query.toLowerCase() );
+                startActivity(intent);
+
+                // workaround to avoid issues with some emulators and keyboard devices firing twice if a keyboard enter is used
+                // see https://code.google.com/p/android/issues/detail?id=24599
+                searchView.clearFocus();
+
+                return true;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                return false;
+            }
+        });
+
+        return super.onCreateOptionsMenu(menu);
     }
 
 

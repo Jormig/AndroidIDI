@@ -20,7 +20,18 @@
     <string name="drag_menu7" translatable="false">Salir</string>
     <string name="drag_menu8" translatable="false">Calificar</string>
 
+    <string name="ListTitleAct_TITLE">Títulos</string>
+    <string name="ListFilmAct_TITLE">Librería</string>
+    <string name="PantallaAltaAct_TITLE">Añadir Film</string>
+    <string name="EliminarAct_TITLE">Eliminar Films</string>
+    <string name="ListTitleSearchAct_TITLE"></string>
+    <string name="ListCalificarAct_TITLE">Calificar Films</string>
+
     <string name="title_rating" translatable="false">Calificar</string>
+    <string name="search_label">buscar actor o actriz ...</string>
+    <string name="search_hint">buscar actor o actriz ...</string>
+    <string name="settings_description">buscar actor o actriz ...</string>
+
     <string name="versi_n_de_la_aplicaci_n">Versión de la aplicación</string>
     <string name="versionids">1.0</string>
 </resources>

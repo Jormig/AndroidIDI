@@ -3,6 +3,9 @@ package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.SearchManager;
+import android.app.SearchableInfo;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -114,11 +117,23 @@ public class BaseActivity extends AppCompatActivity {
         String activity = this.getClass().getSimpleName();
 
         switch (activity) {
+
+            case "ListTitleActivity":
+                setTitle(R.string.ListTitleAct_TITLE);
+                break;
             case "ListFilmActivity":
-                setTitle(R.string.app_name); // Setear título actual
+                setTitle(R.string.ListFilmAct_TITLE);
                 break;
             case "PantallaAltaFilmActivity":
-                setTitle("Añadir Film"); // Setear título actual
+                setTitle(R.string.PantallaAltaAct_TITLE);
+                break;
+            case "ListTitlesSearchActivity":
+                setTitle(R.string.ListTitleSearchAct_TITLE);
+                break;
+            case "ListCalificarActivity":
+                setTitle(R.string.ListCalificarAct_TITLE);
+                break;
+            default:  setTitle(R.string.app_name);
                 break;
         }
     }
@@ -158,9 +173,14 @@ public class BaseActivity extends AppCompatActivity {
             case "PantallaAltaFilmActivity":
                 navigationView.getMenu().getItem(2).setChecked(true);
                 break;
+            case "ListTitlesSearchActivity":
+                navigationView.getMenu().getItem(4).setChecked(true);
+                break;
             case "ListCalificarActivity":
                 navigationView.getMenu().getItem(5).setChecked(true);
                 break;
+
+
         }
     }
 
@@ -204,12 +224,21 @@ public class BaseActivity extends AppCompatActivity {
                 }*/
                 break;
 
+            case R.id.nav_4: //Buscar
+
+                    intent = new Intent(getApplicationContext(), ListTitlesSearchActivity.class);
+                    intent.putExtra("from", "navigationdrawer" );
+                    startActivity(intent);
+                break;
+
             case R.id.nav_8: //Calificar
                 if (!activity.equals("ListCalificarActivity")) {
                     intent = new Intent(this, ListCalificarActivity.class);
                     startActivity(intent);
                 }
                 break;
+
+
             case R.id.nav_exit:
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
                 alertDialogBuilder.setMessage("Esta a punto de salir de la aplicación")
@@ -223,7 +252,7 @@ public class BaseActivity extends AppCompatActivity {
                         startActivity(homeIntent);
                     }
                 });
-                alertDialogBuilder.setNegativeButton("Cancelar", new DialogInterface.OnClickListener() {
+                alertDialogBuilder.setNegativeButton("Quedarme", new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int id) {
                         // User cancelled the dialog
                     }
@@ -266,16 +295,22 @@ public class BaseActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu, menu);
+
         MenuItem searchItem = menu.findItem(R.id.action_search);
         final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
+        searchView.setSearchableInfo(searchableInfo);
 
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // perform query here
 
-                // workaround to avoid issues with some emulators and keyboard devices firing twice if a keyboard enter is used
-                // see https://code.google.com/p/android/issues/detail?id=24599
+                Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
+                intent.putExtra("query",query.toLowerCase() );
+                startActivity(intent);
+
                 searchView.clearFocus();
 
                 return true;
@@ -288,8 +323,15 @@ public class BaseActivity extends AppCompatActivity {
         });
 
 
+        /*Search code  2
+        MenuItem searchItem = menu.findItem(R.id.action_search);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
+        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
+        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
+        //searchView.setQueryRefinementEnabled(true);
+        searchView.setSearchableInfo(searchableInfo);
 
-
+        */
         return super.onCreateOptionsMenu(menu);
     }
 
