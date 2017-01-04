@@ -18,10 +18,12 @@ public class ListTitleSearchAdapter extends BaseAdapter  {
 
     protected Activity activity;
     protected List<Film> items;
+    protected List<Integer> countFilms; //numero de peliculas por actor
 
-    public ListTitleSearchAdapter(Activity activity, List<Film> items) {
+    public ListTitleSearchAdapter(Activity activity, List<Film> items, List<Integer> countFilms) {
         this.activity = activity;
         this.items = items;
+        this.countFilms = countFilms;
     }
 
     @Override
@@ -31,11 +33,13 @@ public class ListTitleSearchAdapter extends BaseAdapter  {
 
     public void clear() {
         items.clear();
+        countFilms.clear();
     }
 
-    public void addAll(List<Film> category) {
-        for (int i = 0; i < category.size(); i++) {
-            items.add(category.get(i));
+    public void addAll(List<Film> films, List<Integer> countF) {
+        for (int i = 0; i < films.size(); i++) {
+            items.add(films.get(i));
+            countFilms.add(countF.get(i));
         }
     }
 
@@ -69,10 +73,8 @@ public class ListTitleSearchAdapter extends BaseAdapter  {
         TextView title = (TextView) v.findViewById(R.id.category);
         title.setText(capTitle);
 
-        TextView director = (TextView) v.findViewById(R.id.texto2) ;
-        //director.setText( );
-
-
+        TextView numFilms = (TextView) v.findViewById(R.id.texto2) ;
+        numFilms.setText(Integer.toString(countFilms.get(position))+ " Films");
 
         return v;
     }

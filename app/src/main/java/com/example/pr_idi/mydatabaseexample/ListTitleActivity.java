@@ -5,6 +5,7 @@ import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -47,6 +48,7 @@ public class ListTitleActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.onCreateDraweron(R.layout.list_titles);
+        firstHelp();
     }
 
     protected void onResume() {
@@ -80,16 +82,13 @@ public class ListTitleActivity extends BaseActivity {
                 puntajeIni = filme.getCritics_rate();
                 final TextView rate = (TextView) rankDialog.findViewById(R.id.rate_dialog);
                 rate.setText(String.valueOf(puntajeIni+"/10"));
-
                 ratingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
                     public void onRatingChanged(RatingBar ratingBar, float rating,
                                                 boolean fromUser) {
                         //Toast.makeText(getApplicationContext(),"Your Selected Ratings  : " + String.valueOf(rating), Toast.LENGTH_LONG).show();
                         rate.setText(String.valueOf((int)(rating*2)+"/10"));
-
                     }
                 });
-
                 Button updateButton = (Button) rankDialog.findViewById(R.id.rank_dialog_button);
                 updateButton.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -103,9 +102,6 @@ public class ListTitleActivity extends BaseActivity {
                         filmData.updateRating(rating,filme.getId() );
                         filmData.close();
                         reloadAllData();
-
-
-
                         Snackbar.make(fview, "Calificación cambiada", Snackbar.LENGTH_LONG)
                                 //.setActionTextColor(Color.CYAN)
                                 .setActionTextColor(getResources().getColor(R.color.snackbar_action))
@@ -119,18 +115,14 @@ public class ListTitleActivity extends BaseActivity {
                                         filmData.updateRating(puntajeIni,filme.getId() );
                                         filmData.close();
                                         reloadAllData();
-
                                     }
                                 })
                                 .show();
-
                         rankDialog.dismiss();
                     }
                 });
                 //now that the dialog is set up, it's time to show it
                 rankDialog.show();
-
-
                 return true;
             }
         });
@@ -190,6 +182,24 @@ public class ListTitleActivity extends BaseActivity {
 
 
 
+    public void firstHelp() {
+        final SharedPreferences settings  = getSharedPreferences("MiPreferencia", Context.MODE_PRIVATE);
 
+        if (settings .getBoolean("habilitarConsejoListTitleActivity", true)) {
 
+            Snackbar.make(findViewById(R.id.ListView_listado), R.string.consejo_lisTitleAct, Snackbar.LENGTH_INDEFINITE)
+                    //.setActionTextColor(Color.CYAN)
+                    .setActionTextColor(getResources().getColor(R.color.snackbar_action))
+                    .setAction("[X]", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.i("Snackbar", "Pulsada acción snackbar!");
+                            SharedPreferences.Editor editor = settings .edit();
+                            editor.putBoolean("habilitarConsejoListTitleActivity", false);
+                            editor.commit();
+                        }
+                    })
+                    .show();
+            }
+        }
 }

@@ -1,6 +1,8 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Dialog;
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -27,6 +29,7 @@ public class ListCalificarActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         super.onCreateDraweron(R.layout.list_titles);
+        firstHelp();
     }
     protected void onResume() {
         super.onResume();
@@ -123,7 +126,26 @@ public class ListCalificarActivity extends BaseActivity {
     }
 
 
+    public void firstHelp() {
+        final SharedPreferences settings  = getSharedPreferences("MiPreferencia", Context.MODE_PRIVATE);
 
+        if (settings.getBoolean("habilitarConsejoListCalificarActivity", true)) {
+
+            Snackbar.make(findViewById(R.id.ListView_listado), R.string.consejo_lisCalificarAct, Snackbar.LENGTH_INDEFINITE)
+                    //.setActionTextColor(Color.CYAN)
+                    .setActionTextColor(getResources().getColor(R.color.snackbar_action))
+                    .setAction("[X]", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.i("Snackbar", "Pulsada acción snackbar!");
+                            SharedPreferences.Editor editor = settings .edit();
+                            editor.putBoolean("habilitarConsejoListCalificarActivity", false);
+                            editor.commit();
+                        }
+                    })
+                    .show();
+        }
+    }
 
 
 }

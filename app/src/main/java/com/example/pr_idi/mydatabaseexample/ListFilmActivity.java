@@ -1,8 +1,11 @@
 package com.example.pr_idi.mydatabaseexample;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -42,6 +45,9 @@ public class ListFilmActivity extends BaseActivity {
         // use a linear layout manager
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
+
+        //para snackbar consejos
+        firstHelp();
 
     }
 
@@ -89,6 +95,28 @@ public class ListFilmActivity extends BaseActivity {
                 return super.onOptionsItemSelected(item);
         }
     }
+
+    public void firstHelp() {
+        final SharedPreferences settings  = getSharedPreferences("MiPreferencia", Context.MODE_PRIVATE);
+
+        if (settings.getBoolean("habilitarConsejoListFilmActivity", true)) {
+
+            Snackbar.make(findViewById(R.id.my_recycler_view), R.string.consejo_lisFilmAct, Snackbar.LENGTH_INDEFINITE)
+                    //.setActionTextColor(Color.CYAN)
+                    .setActionTextColor(getResources().getColor(R.color.snackbar_action))
+                    .setAction("[X]", new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            Log.i("Snackbar", "Pulsada acción snackbar!");
+                            SharedPreferences.Editor editor = settings .edit();
+                            editor.putBoolean("habilitarConsejoListFilmActivity", false);
+                            editor.commit();
+                        }
+                    })
+                    .show();
+        }
+    }
+
     public FilmData getMyFilmData(){
         return myFilmData;
     }

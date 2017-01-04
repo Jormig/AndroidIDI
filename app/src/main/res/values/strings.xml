@@ -27,6 +27,11 @@
     <string name="ListTitleSearchAct_TITLE"></string>
     <string name="ListCalificarAct_TITLE">Calificar Films</string>
 
+    <string name="consejo_lisTitleAct">Consejo: Al manetener pulsado un título puedes modificar la calificación del Film.</string>
+    <string name="consejo_lisFilmAct">Consejo: Al manetener pulsado en un Film puedes entrar en modo borrar Films.</string>
+   <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film.</string>
+    <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
+
     <string name="title_rating" translatable="false">Calificar</string>
     <string name="search_label">buscar actor o actriz ...</string>
     <string name="search_hint">buscar actor o actriz ...</string>

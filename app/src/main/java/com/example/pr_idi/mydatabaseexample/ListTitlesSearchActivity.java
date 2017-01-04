@@ -21,11 +21,13 @@ import android.widget.ListView;
 import android.widget.RatingBar;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ListTitlesSearchActivity extends BaseActivity {
 
     private List<Film> myDataset;
+    private List<Integer> myCountFilms;
     private FilmData myFilmData;
     private ListView lv;
     private FilmData filmData;
@@ -48,17 +50,20 @@ public class ListTitlesSearchActivity extends BaseActivity {
 
         myFilmData = new FilmData(this);
         myFilmData.open();
-        String order = MySQLiteHelper.COLUMN_TITLE;
+        String order = MySQLiteHelper.COLUMN_PROTAGONIST;
         myDataset = myFilmData.getAllActors(order.concat(" ASC"));
         lv = (ListView) findViewById(R.id.ListView_listado);
-        adapter = new ListTitleSearchAdapter(this, myDataset);
+        myCountFilms = myFilmData.getCountFilms( myDataset);
+        adapter = new ListTitleSearchAdapter(this, myDataset,myCountFilms);
         lv.setAdapter(adapter);
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> listView, View itemView, int index,
                                     long id) {
-                //Code to query
-
+                Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
+                final  String prota = myDataset.get(index).getProtagonist();
+                intent.putExtra("query",prota.toLowerCase() );
+                startActivity(intent);
             }
         });
         myFilmData.close();
@@ -67,10 +72,10 @@ public class ListTitlesSearchActivity extends BaseActivity {
 
     private void reloadAllData(){
         myFilmData.open();
-        String order = MySQLiteHelper.COLUMN_TITLE;
-        myDataset = myFilmData.getAllFilms(order.concat(" ASC"));
+        String order = MySQLiteHelper.COLUMN_PROTAGONIST;
+        myDataset = myFilmData.getAllActors(order.concat(" ASC"));
         adapter.clear();
-        adapter.addAll(myDataset);
+        adapter.addAll(myDataset,myCountFilms);
         adapter.notifyDataSetChanged();
         myFilmData.close();
     }

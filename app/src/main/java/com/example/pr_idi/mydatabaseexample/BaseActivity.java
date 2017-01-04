@@ -8,6 +8,7 @@ import android.app.SearchableInfo;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -25,6 +26,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
@@ -62,7 +64,6 @@ public class BaseActivity extends AppCompatActivity {
         content = (FrameLayout) findViewById(R.id.content_frame);
         getLayoutInflater().inflate(layoutResID, content, true);
 
-
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         NavigationView navigationView = (NavigationView) findViewById(R.id.left_drawer);
         if (navigationView != null) {
@@ -70,9 +71,6 @@ public class BaseActivity extends AppCompatActivity {
         }
 
         drawerTitle = getResources().getString(R.string.app_name);
-
-
-
         drawerToggle = new ActionBarDrawerToggle(
                 this,                  // host Activity
                 drawerLayout,         // DrawerLayout object
@@ -80,16 +78,18 @@ public class BaseActivity extends AppCompatActivity {
                 R.string.drawer_open,  // "open drawer" description
                 R.string.drawer_close  // "close drawer" description
         ) {
-
             // Called when a drawer has settled in a completely closed state.
             public void onDrawerClosed(View view) {
                 super.onDrawerClosed(view);
                // getActionBar().setTitle(mTitle);
             }
-
             // Called when a drawer has settled in a completely open state. /
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
+                // Check if no view has focus:
+
+                hideSoftKeyboard();
+
                // getActionBar().setTitle(mDrawerTitle);
             }
         };
@@ -102,6 +102,8 @@ public class BaseActivity extends AppCompatActivity {
 
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         this.getSupportActionBar().setHomeButtonEnabled(true);
+
+        //SharedPreferences preferencia = getSharedPreferences("MiPreferencia",Context.MODE_PRIVATE);
 
     }
 
@@ -333,6 +335,19 @@ public class BaseActivity extends AppCompatActivity {
 
         */
         return super.onCreateOptionsMenu(menu);
+    }
+
+    public void hideSoftKeyboard() {
+        if(getCurrentFocus()!=null) {
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
+    }
+
+    public void showSoftKeyboard(View view) {
+        InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        view.requestFocus();
+        inputMethodManager.showSoftInput(view, 0);
     }
 
 

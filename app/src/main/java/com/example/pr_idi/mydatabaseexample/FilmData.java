@@ -149,7 +149,25 @@ public class FilmData {
         // make sure to close the cursor
         cursor.close();
         return comments;
+    }
 
+    public List<Integer> getCountFilms(List<Film> protas) {
+
+        List<Integer> num = new ArrayList<Integer>();
+        final String TAG = FilmData.class.getSimpleName();
+        for (int i =0 ; i< protas.size() ; ++i) {
+            String whereClause = MySQLiteHelper.COLUMN_PROTAGONIST + " LIKE " + "'" + protas.get(i).getProtagonist() + "'";
+            Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
+                    new String[]{"count(*)"}, whereClause, null, null, null, null);
+
+            cursor.moveToFirst();
+            int aux = cursor.getInt(0);
+            Log.d(TAG, String.valueOf(aux));
+            num.add(aux);
+            // make sure to close the cursor
+            cursor.close();
+        }
+        return num;
     }
 
     private Film cursorToFilm(Cursor cursor) {
@@ -166,4 +184,6 @@ public class FilmData {
 
         return film;
     }
+
+
 }
