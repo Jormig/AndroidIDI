@@ -25,6 +25,11 @@ import android.widget.TextView;
 
 import java.util.List;
 
+/**
+ * Created by taos on 01/01/2017.
+ */
+
+
 public class SearchResultActivity extends AppCompatActivity {
 
     private List<Film> myDataset;

@@ -28,19 +28,6 @@
             android:layout_height="match_parent" />
     </LinearLayout>
 
-
-
-    <!--android.support.design.widget.NavigationView
-        android:id="@+id/left_drawer"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0dp"
-        android:background="#111"
-        app:headerLayout="@layout/nav_header"
-        app:menu="@menu/nav_menu" /-->
     <android.support.design.widget.NavigationView
         android:id="@+id/left_drawer"
         android:layout_width="wrap_content"

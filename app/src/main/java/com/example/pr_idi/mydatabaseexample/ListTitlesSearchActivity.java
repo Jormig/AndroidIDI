@@ -24,6 +24,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Created by taos on 01/01/2017.
+ */
+
+
 public class ListTitlesSearchActivity extends BaseActivity {
 
     private List<Film> myDataset;
@@ -43,6 +48,7 @@ public class ListTitlesSearchActivity extends BaseActivity {
         }
         catch (Exception e){
         }
+
     }
 
     protected void onResume() {

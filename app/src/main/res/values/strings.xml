@@ -31,6 +31,7 @@
     <string name="consejo_lisFilmAct">Consejo: Al manetener pulsado en un Film puedes entrar en modo borrar Films.</string>
    <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film.</string>
     <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
+    <string name="consejo_lisFilmDeleteAct">Al pulsar en un Film puedes entrar en modo borrar Films.</string>
 
     <string name="title_rating" translatable="false">Calificar</string>
     <string name="busquedaVacia" translatable="false">No hay protagonista con el nombre buscado.</string>

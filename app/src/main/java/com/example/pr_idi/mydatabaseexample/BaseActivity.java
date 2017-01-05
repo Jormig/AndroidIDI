@@ -1,6 +1,8 @@
 package com.example.pr_idi.mydatabaseexample;
 
 
+import android.accounts.Account;
+import android.accounts.AccountManager;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.SearchManager;
@@ -31,6 +33,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.FrameLayout;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.app.ActionBar;
 
@@ -43,8 +46,16 @@ import com.google.android.gms.appindexing.Thing;
 import com.google.android.gms.common.api.GoogleApiClient;
 
 
+import org.w3c.dom.Text;
+
+import java.util.LinkedList;
+import java.util.List;
+
 import static java.lang.String.*;
 
+/**
+ * Created by taos on 01/01/2017.
+ */
 
 public class BaseActivity extends AppCompatActivity {
 
@@ -157,7 +168,8 @@ public class BaseActivity extends AppCompatActivity {
                         //menuItem.setChecked(true);
                         // Crear nuevo fragmento
                        // String title = menuItem.getTitle().toString();
-
+                        TextView username = (TextView) findViewById(R.id.username);
+                        username.setText(R.string.app_name);
                         selectItem(menuItem);
                         return true;
                     }
@@ -220,14 +232,12 @@ public class BaseActivity extends AppCompatActivity {
                 break;
 
             case R.id.nav_3: //Borrar
-               /* if (!activity.equals("EraserActivity")) {
-                    intent = new Intent(this, EraserActivity.class);
+                    intent = new Intent(getApplicationContext(), ListFilmDeleteActivity.class);
+                    intent.putExtra("from", "navigationdrawer" );
                     startActivity(intent);
-                }*/
                 break;
 
             case R.id.nav_4: //Buscar
-
                     intent = new Intent(getApplicationContext(), ListTitlesSearchActivity.class);
                     intent.putExtra("from", "navigationdrawer" );
                     startActivity(intent);
@@ -349,6 +359,8 @@ public class BaseActivity extends AppCompatActivity {
         view.requestFocus();
         inputMethodManager.showSoftInput(view, 0);
     }
+
+
 
 
 }

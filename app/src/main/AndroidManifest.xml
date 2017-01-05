@@ -32,8 +32,8 @@
                 android:resource="@xml/searchable" />
         </activity>
         <activity android:name=".ListFilmActivity" />
-
         <activity android:name=".PantallaAltaFilmActivity" />
+        <activity android:name=".ListFilmDeleteActivity" />
 
         <activity
             android:name=".About"

@@ -52,8 +52,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "values('El ataque de los tomates asesinos'," +
                 "'Estados Unidos de America'," +
                 "1986," +
-                "'Algun tio Director'," +
-                "'Algun otro tio Actor'," +
+                "'John De Bello'," +
+                "'George Clooney'," +
                 "1);");
         database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
                 "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
@@ -63,8 +63,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "values('El ataque de los tomates asesinos 2'," +
                 "'Estados Unidos de America'," +
                 "1987," +
-                "'Algun Director'," +
-                "'Alguna Actor'," +
+                "'John De Bello'," +
+                "'Michael Villani'," +
                 "5);");
         database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
                 "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
@@ -74,8 +74,8 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 "values('Breakdance 2: Electic Boogaloo'," +
                 "'Estados Unidos de America'," +
                 "1984," +
-                "'Sam Fistenberg Director'," +
-                "'Alguien Actor'," +
+                "'Sam Firstenberg'," +
+                "'Lucinda Dickey'," +
                 "4);");
     }
 

@@ -25,6 +25,7 @@ public class About extends AppCompatActivity {
         setContentView(R.layout.about);
         TextView txt = (TextView) findViewById(textView2);
         txt.setText(txt.getText().toString().concat(" v" + (getString(R.string.versionids))));
+        this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
     @Override
@@ -35,5 +36,17 @@ public class About extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         return super.onPrepareOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Respond to the action bar's Up/Home button
+            case android.R.id.home:
+                //NavUtils.navigateUpFromSameTask(this);
+                finish();
+                return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
