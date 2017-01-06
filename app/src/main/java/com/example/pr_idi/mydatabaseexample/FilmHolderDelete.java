@@ -118,7 +118,7 @@ public class FilmHolderDelete extends SwappingHolder
                 public void onDestroyActionMode(ActionMode mode) {
                     ListFilmDeleteActivity.setDeleteMode();
                     ((ListFilmDeleteActivity) ctxt).onResume();
-                    
+
                 }
             });
 
