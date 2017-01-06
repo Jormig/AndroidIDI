@@ -1,6 +1,7 @@
 package com.example.pr_idi.mydatabaseexample;
 
 import android.app.Dialog;
+import android.app.ProgressDialog;
 import android.app.SearchManager;
 import android.app.SearchableInfo;
 import android.content.Context;
@@ -106,18 +107,17 @@ public class ListTitlesSearchActivity extends BaseActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-                Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
+                final Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
                 intent.putExtra("query",query.toLowerCase() );
                 startActivity(intent);
                 searchView.clearFocus();
-
                 return true;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;
-            }
+            }//TODO
         });
 
         return super.onCreateOptionsMenu(menu);

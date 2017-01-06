@@ -50,19 +50,20 @@ public class FilmHolderDelete extends SwappingHolder
     @Override
     public boolean onLongClick(View v) {
         if(ListFilmDeleteActivity.getDeleteMode()) {
-            setSelected(v);
+            //setSelected(v);
         }
         return true;
     }
 
     @Override
     public void onClick(View v) {
-
+        setSelected(v);
+        if(!ListFilmDeleteActivity.getDeleteMode()) {
             ListFilmDeleteActivity.setDeleteMode();
-            ((ListFilmDeleteActivity)ctxt).startActionMode(new ActionMode.Callback() {
+            ((ListFilmDeleteActivity) ctxt).startActionMode(new ActionMode.Callback() {
                 @Override
                 public boolean onCreateActionMode(ActionMode mode, Menu menu) {
-                    MenuInflater inflater = ((ListFilmDeleteActivity)ctxt).getMenuInflater();
+                    MenuInflater inflater = ((ListFilmDeleteActivity) ctxt).getMenuInflater();
                     inflater.inflate(R.menu.menu_delete_items, menu);
                     mode.setTitle("Modo borrar");
                     return true;
@@ -80,20 +81,20 @@ public class FilmHolderDelete extends SwappingHolder
 
                             AlertDialog.Builder builder = new AlertDialog.Builder(ctxt);
                             int count = 0;
-                            for (Film model : ((ListFilmDeleteActivity)ctxt).getMyDataset()) {
+                            for (Film model : ((ListFilmDeleteActivity) ctxt).getMyDataset()) {
                                 if (model.isSelected()) {
-                                    count ++;
+                                    count++;
                                 }
                             }
-                            builder.setMessage("Esta a punto de borrar "+ String.valueOf(count)+ " elementos, ¿seguro que desea borrarlos?")
+                            builder.setMessage("Esta a punto de borrar " + String.valueOf(count) + " elementos, ¿seguro que desea borrarlos?")
                                     .setTitle("Atención");
 
                             builder.setPositiveButton("Borrar", new DialogInterface.OnClickListener() {
                                 public void onClick(DialogInterface dialog, int id) {
                                     // User clicked OK button
-                                    for (Film model : ((ListFilmDeleteActivity)ctxt).getMyDataset()) {
+                                    for (Film model : ((ListFilmDeleteActivity) ctxt).getMyDataset()) {
                                         if (model.isSelected()) {
-                                            ((ListFilmDeleteActivity)ctxt).getMyFilmData().deleteFilm(model);
+                                            ((ListFilmDeleteActivity) ctxt).getMyFilmData().deleteFilm(model);
                                         }
                                     }
                                     mode.finish();
@@ -116,11 +117,11 @@ public class FilmHolderDelete extends SwappingHolder
                 @Override
                 public void onDestroyActionMode(ActionMode mode) {
                     ListFilmDeleteActivity.setDeleteMode();
-                    ((ListFilmDeleteActivity)ctxt).onResume();
+                    ((ListFilmDeleteActivity) ctxt).onResume();
                 }
             });
-            setSelected(v);
 
+        }
 
 
     }

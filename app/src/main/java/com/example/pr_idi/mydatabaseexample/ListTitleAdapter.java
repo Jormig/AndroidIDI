@@ -76,10 +76,12 @@ public class ListTitleAdapter  extends BaseAdapter  {
         title.setText(capTitle);
 
         TextView director = (TextView) v.findViewById(R.id.texto2) ;
-        director.setText(dir.getDirector());
+        director.setText("Director: " + dir.getDirector());
 
         TextView puntuacion = (TextView) v.findViewById(R.id.texto);
         puntuacion.setText( String.valueOf(dir.getCritics_rate()));
+
+
 
 
         return v;

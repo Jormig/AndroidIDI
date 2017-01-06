@@ -126,7 +126,7 @@ public class ListFilmDeleteActivity extends BaseActivity {
     }
     public void onDestroy() {
         super.onDestroy();
-        setDeleteMode();
+        //setDeleteMode();
         finish();
     }
 
