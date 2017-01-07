@@ -153,18 +153,12 @@ public class ListTitleActivity extends BaseActivity {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // perform query here
-
                 Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
                 intent.putExtra("query",query.toLowerCase() );
                 startActivity(intent);
-
-                // workaround to avoid issues with some emulators and keyboard devices firing twice if a keyboard enter is used
-                // see https://code.google.com/p/android/issues/detail?id=24599
                 searchView.clearFocus();
-
                 return true;
             }
-
             @Override
             public boolean onQueryTextChange(String newText) {
                 return false;

@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.List;
 
@@ -39,6 +40,8 @@ public class ListFilmDeleteActivity extends BaseActivity {
         //setContentView(R.layout.listfilmview);
         super.onCreateDraweron(R.layout.listfilmview);
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
+
+        setTitle("Modo Borrar");
 
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
@@ -94,6 +97,11 @@ public class ListFilmDeleteActivity extends BaseActivity {
                     }
                 }
                 Log.d("TAG","Output : " + text);
+                Toast toast1 =
+                        Toast.makeText(getApplicationContext(),
+                                "Seleccione para eliminar.", Toast.LENGTH_SHORT);
+
+                toast1.show();
             return true;
             case R.id.action_about:
                 intent = new Intent(this, About.class);

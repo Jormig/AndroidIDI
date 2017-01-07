@@ -146,6 +146,9 @@ public class BaseActivity extends AppCompatActivity {
             case "ListCalificarActivity":
                 setTitle(R.string.ListCalificarAct_TITLE);
                 break;
+            case "ListFilmDeleteActivity":
+                setTitle(R.string.ListfilmDelete_TITLE);
+                break;
             default:  setTitle(R.string.app_name);
                 break;
         }
@@ -187,13 +190,15 @@ public class BaseActivity extends AppCompatActivity {
             case "PantallaAltaFilmActivity":
                 navigationView.getMenu().getItem(2).setChecked(true);
                 break;
+            case "ListFilmDeleteActivity":
+                navigationView.getMenu().getItem(3).setChecked(true);
+                break;
             case "ListTitlesSearchActivity":
                 navigationView.getMenu().getItem(4).setChecked(true);
                 break;
             case "ListCalificarActivity":
                 navigationView.getMenu().getItem(5).setChecked(true);
                 break;
-
 
         }
     }
@@ -298,6 +303,11 @@ public class BaseActivity extends AppCompatActivity {
                 intent = new Intent(this, About.class);
                 startActivity(intent);
                 return true;
+
+            case R.id.action_help:
+                intent = new Intent(this, Help.class);
+                startActivity(intent);
+                return true;
         }
         return super.onOptionsItemSelected(item);
     }
@@ -313,18 +323,14 @@ public class BaseActivity extends AppCompatActivity {
         SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
         SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
         searchView.setSearchableInfo(searchableInfo);
-
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 // perform query here
-
                 Intent intent = new Intent(getApplicationContext(), SearchResultActivity.class);
                 intent.putExtra("query",query.toLowerCase() );
                 startActivity(intent);
-
                 searchView.clearFocus();
-
                 return true;
             }
 
@@ -333,17 +339,6 @@ public class BaseActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
-        /*Search code  2
-        MenuItem searchItem = menu.findItem(R.id.action_search);
-        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        SearchManager searchManager = (SearchManager) getSystemService(Context.SEARCH_SERVICE);
-        SearchableInfo searchableInfo = searchManager.getSearchableInfo(getComponentName());
-        //searchView.setQueryRefinementEnabled(true);
-        searchView.setSearchableInfo(searchableInfo);
-
-        */
         return super.onCreateOptionsMenu(menu);
     }
 

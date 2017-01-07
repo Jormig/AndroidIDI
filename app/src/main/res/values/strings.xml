@@ -26,14 +26,25 @@
     <string name="EliminarAct_TITLE">Eliminar Films</string>
     <string name="ListTitleSearchAct_TITLE"></string>
     <string name="ListCalificarAct_TITLE">Calificar Films</string>
+    <string name="ListfilmDelete_TITLE">Modo Borrar</string>
 
     <string name="consejo_lisTitleAct">Consejo: Al manetener pulsado un título puedes modificar la calificación del Film.</string>
     <string name="consejo_lisFilmAct">Consejo: Al manetener pulsado en un Film puedes entrar en modo borrar Films.</string>
-   <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film.</string>
+    <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film.</string>
     <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
     <string name="consejo_lisFilmDeleteAct">Al pulsar en un Film puedes entrar en modo borrar Films.</string>
 
+    <string name="help_menu1" translatable="false">Funcionamiento general de la aplicación.</string>
+    <string name="help_menu2" translatable="false">Cómo navegar entre las opciones.</string>
+    <string name="help_menu3" translatable="false">Ver títulos de films.</string>
+    <string name="help_menu4" translatable="false">Ver libreria de films.</string>
+    <string name="help_menu5" translatable="false">Cómo añadir films.</string>
+    <string name="help_menu6" translatable="false">Cómo eliminar films.</string>
+    <string name="help_menu7" translatable="false">Búsqueda de protagonista.</string>
+    <string name="help_menu8" translatable="false">Calificar films.</string>
+
     <string name="title_rating" translatable="false">Calificar</string>
+    <string name="title_help" translatable="false">Menu de Ayuda</string>
     <string name="busquedaVacia" translatable="false">No hay protagonista con el nombre buscado.</string>
     <string name="search_label">buscar actor o actriz ...</string>
     <string name="search_hint">buscar actor o actriz ...</string>

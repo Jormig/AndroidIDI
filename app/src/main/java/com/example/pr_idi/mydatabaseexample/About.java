@@ -26,6 +26,7 @@ public class About extends AppCompatActivity {
         TextView txt = (TextView) findViewById(textView2);
         txt.setText(txt.getText().toString().concat(" v" + (getString(R.string.versionids))));
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle("About");
     }
 
     @Override
