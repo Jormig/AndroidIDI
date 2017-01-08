@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="9bd1d870d818b91a8ad5358542123787428c7923">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ee224e17c91539921d9ed3e2099f0cc48b73fcf5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -57,24 +66,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="c55bf8d3649b7ac98d5d6fd799121c8f4fa3396a">
-        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ffdc92926fc4ee7cea8544186d43f64bafd55ec4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="22.0.1"
-        sha1="4b4dac9247427a5adf423a7c52e8ec00a26aa8ff">
-        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ee224e17c91539921d9ed3e2099f0cc48b73fcf5\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="true"
         optimize="true"
@@ -117,6 +108,15 @@
         revision="22.0.1"
         sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_7fb36dad9e2c2a4093b8da75b6ded6913f558378\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="08e5caa9f30e50f051875e472fd5c6a15a1810f1">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ffdc92926fc4ee7cea8544186d43f64bafd55ec4\classes.dex" />
     </item>
     <item
         is-multidex="true"

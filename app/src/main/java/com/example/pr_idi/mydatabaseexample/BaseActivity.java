@@ -255,6 +255,16 @@ public class BaseActivity extends AppCompatActivity {
                 }
                 break;
 
+            case R.id.nav_About: //Calificar
+                    intent = new Intent(this, About.class);
+                    startActivity(intent);
+                break;
+
+            case R.id.nav_Help: //Calificar
+                    intent = new Intent(this, Help.class);
+                    startActivity(intent);
+                break;
+
 
             case R.id.nav_exit:
                 AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item
@@ -35,6 +36,14 @@
             android:id="@+id/configuration_section"
             android:title="@string/drag_menu6">
             <menu>
+                <item
+                    android:id="@+id/nav_About"
+                    android:icon="@drawable/ic_action_action_info_outline"
+                    android:title="@string/drag_menu9" />
+                <item
+                    android:id="@+id/nav_Help"
+                    android:icon="@drawable/ic_action_action_help"
+                    android:title="@string/drag_menu10" />
                 <item
                     android:id="@+id/nav_exit"
                     android:icon="@drawable/ic_action_exit_to_app"

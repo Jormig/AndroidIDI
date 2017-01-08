@@ -15,11 +15,13 @@ public class BaseHelpDescriptionActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(getStringResourceByName(getIntent().getExtras().getString("help_menu_num")));
         this.getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        setTitle(getString(R.string.help_TITLE));
     }
 
     private int getStringResourceByName(String aString) {
         String packageName = getPackageName();
         return  getResources().getIdentifier(aString, "layout", packageName);
+
        // return getString(resId);
     }
 

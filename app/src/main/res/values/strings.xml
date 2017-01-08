@@ -19,6 +19,9 @@
     <string name="drag_menu6">Configuración</string>
     <string name="drag_menu7" translatable="false">Salir</string>
     <string name="drag_menu8" translatable="false">Calificar</string>
+    <string name="drag_menu9" translatable="false">About</string>
+    <string name="drag_menu10" translatable="false">Help</string>
+
 
     <string name="ListTitleAct_TITLE">Títulos</string>
     <string name="ListFilmAct_TITLE">Librería</string>
@@ -27,6 +30,7 @@
     <string name="ListTitleSearchAct_TITLE"></string>
     <string name="ListCalificarAct_TITLE">Calificar Films</string>
     <string name="ListfilmDelete_TITLE">Modo Borrar</string>
+    <string name="help_TITLE">Help</string>
 
     <string name="consejo_lisTitleAct">Consejo: Al manetener pulsado un título puedes modificar la calificación del Film.</string>
     <string name="consejo_lisFilmAct">Consejo: Al manetener pulsado en un Film puedes entrar en modo borrar Films.</string>
@@ -34,14 +38,139 @@
     <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
     <string name="consejo_lisFilmDeleteAct">Al pulsar en un Film puedes entrar en modo borrar Films.</string>
 
-    <string name="help_menu1" translatable="false">Funcionamiento general de la aplicación.</string>
-    <string name="help_menu2" translatable="false">Cómo navegar entre las opciones.</string>
-    <string name="help_menu3" translatable="false">Ver títulos de films.</string>
-    <string name="help_menu4" translatable="false">Ver libreria de films.</string>
-    <string name="help_menu5" translatable="false">Cómo añadir films.</string>
-    <string name="help_menu6" translatable="false">Cómo eliminar films.</string>
-    <string name="help_menu7" translatable="false">Búsqueda de protagonista.</string>
-    <string name="help_menu8" translatable="false">Calificar films.</string>
+    <string name="help_menu1" translatable="false">Funcionamiento general de la aplicación</string>
+    <string name="help_menu2" translatable="false">Cómo navegar entre las opciones</string>
+    <string name="help_menu3" translatable="false">Ver títulos de films</string>
+    <string name="help_menu4" translatable="false">Ver libreria de films</string>
+    <string name="help_menu5" translatable="false">Cómo añadir films</string>
+    <string name="help_menu6" translatable="false">Cómo eliminar films</string>
+    <string name="help_menu7" translatable="false">Búsqueda de protagonista</string>
+    <string name="help_menu8" translatable="false">Calificar films</string>
+
+    <string name="help_menu1_text1" translatable="false">La aplicación ofrece diversas funcionalidades para gestionar
+         una filmoteca personal para el usuario. En donde cada usuariopuede crear, eliminar, recalificar y buscar protagonistas.</string>
+    <string name="help_menu1_subtitulo1" translatable="false">Método de acceso a las funcionalidades</string>
+    <string name="help_menu1_text2" translatable="false">Mediante el botón de switch ubicado en la esquina derecha
+        de la aplicación se puede acceder al menú de las funciones que puedes realizar en la aplicación.</string>
+    <string name="help_menu1_subtitulo2" translatable="false">Funcionalidades</string>
+    <string name="help_menu1_text3" translatable="false">En la aplicación se ofrece diversas funcionalidades para una gestión
+        de una filmoteca personal</string>
+    <string name="help_menu1_subtitulo4" translatable="false">Ver Títulos</string>
+    <string name="help_menu1_text5" translatable="false">Vista principal de la aplicación, dónde
+    se puede visualizar un listado de los títulos almacenados en la aplicación. En esta vista también se puede
+    recalificar un film menteniendo presionado el título a modificar.</string>
+    <string name="help_menu1_subtitulo5" translatable="false">Ver Librería</string>
+    <string name="help_menu1_text6" translatable="false">Vista en dónde se visualiza todos los datos de los films
+    almacenados de los films.</string>
+    <string name="help_menu1_text14" translatable="false">En esta vista es posible borrar films de aplicación. Al mantener
+        pulsado un film se entra en modo borrar. Se elimina los films seleccionados pulsando el botón
+     ubicado en la esquina superior derecha de la aplicación.</string>
+    <string name="help_menu1_subtitulo6" translatable="false">Añadir Film</string>
+    <string name="help_menu1_text7" translatable="false">Existe la opción de añadir un nuevo film
+        a tu filmoteca. Los métodos de acceso es por medio de la pantalla lateral o mediante un icono en el actionBar </string>
+    <string name="help_menu1_subtitulo7" translatable="false">Eliminar Film</string>
+    <string name="help_menu1_text8" translatable="false">Para eliminar un film de la filmoteca existe el menú de la pantalla lateral
+        que te mostrará un listado de los datos de los films donde pulsando seleccionas los films que desees eliminar.</string>
+    <string name="help_menu1_subtitulo8" translatable="false">Buscar protagonista</string>
+    <string name="help_menu1_text9" translatable="false">Es posible hacer búsquedas de protagonistas. Según el protagonista se
+        mostrará un listado de los títulos donde participó como protagonista. Los métodos de acceso se encuentran en el menú de la
+        pantalla lateral y con el icono de la lupa en el actionBar.</string>
+    <string name="help_menu1_subtitulo9" translatable="false">Calificar Film</string>
+    <string name="help_menu1_text10" translatable="false">Se tiene la opción de recalificar un film. Al crear un film
+        se le otorga una calificación personal, más adelante se pude volver a modificar la nota críetica del film.</string>
+    <string name="help_menu1_text13" translatable="false">Para poder cambiar la nota crítica de un film se puede
+        acceder al menú Calificar ubicado en la pantalla lateral. O manteniendo pulsado un título en la pantalla de Títulos.</string>
+    <string name="help_menu1_subtitulo10" translatable="false">Salir de la aplicación</string>
+    <string name="help_menu1_text11" translatable="false">En la pantalla lateral hay una opción de salir de la aplicación.</string>
+
+    <string name="help_menu2_text1" translatable="false">El panel lateral de navegación es un panel en el que se muestran
+        las principales opciones de navegación de la app en el borde izquierdo de la pantalla. La mayor parte del tiempo
+        está oculto, pero aparece cuando el usuario desliza un dedo desde el borde izquierdo de la pantalla o, mientras
+        está en el nivel superior de la app, el usuario toca el ícono de la app en la barra de acciones.</string>
+    <string name="help_menu2_subtitulo1" translatable="false">Menus</string>
+    <string name="help_menu2_text2" translatable="false">Con el panel lateral se accede a todos las funcionalidades de la aplicación.</string>
+    <string name="menu2_desc_titulo" translatable="false">Al presionar "Títulos" se puede acceder a los títulos almacenados en la aplicación.</string>
+  <string name="menu2_desc_libreria" translatable="false">Al presionar "Librería" se puede acceder a todos los datos almacenados.</string>
+  <string name="menu2_desc_anadir" translatable="false">Al presionar "Añadir Film" se puede crear nuevos films.</string>
+  <string name="menu2_desc_eliminar" translatable="false">Al presionar "Eliminar" se puede eliminar uno o varios films a la vez.</string>
+  <string name="menu2_desc_buscar" translatable="false">Al presionar "Buscar" se puede buscar un protagonista y mostrar sus films.</string>
+  <string name="menu2_desc_calificar" translatable="false">Al presionar "Calificar" se puede modificar la calificación de los films.</string>
+
+
+    <string name="help_menu3_text1" translatable="false">La actividad principal de la aplicación es un listado de títulos
+        de los films almacenados.</string>
+    <string name="help_menu3_subtitulo1" translatable="false">Item de títulos</string>
+    <string name="help_menu3_subtitulo2" translatable="false">Funciones extras</string>
+    <string name="help_menu3_text2" translatable="false"> - Primera línea muestra el título del film</string>
+ <string name="help_menu3_text3" translatable="false"> - Segunda línea muestra el director del film.</string>
+ <string name="help_menu3_text4" translatable="false"> - Tercera línea muestra la calificación otorgada hasta el momento</string>
+<string name="help_menu3_text5" translatable="false">En la sección de Títulos puedes modificar la calificación de cada film manteniendo
+    pulsado el film que se desea recalificar.</string>
+<string name="help_menu3_text6" translatable="false">En el actionBar se tiene unos accesos directos para
+    buscar protagonista, añadir film y acceso a configuración.</string>
+
+    <string name="help_menu4_text1" translatable="false">En el apartado librería puedes ver todos los
+        datos de los films almacenados en la aplicación.</string>
+    <string name="help_menu4_subtitulo1" translatable="false">Item de Librería</string>
+    <string name="help_menu4_text2" translatable="false"> - Primera línea muestra el título del film.</string>
+    <string name="help_menu4_text3" translatable="false"> - Segunda línea muestra el país del film.</string>
+    <string name="help_menu4_text4" translatable="false"> - Tercera línea muestra el año de rodaje.</string>
+    <string name="help_menu4_text5" translatable="false"> - Cuarta línea muestra el protagonista del film.</string>
+    <string name="help_menu4_text6" translatable="false"> - Quinta línea muestra el director del film.</string>
+    <string name="help_menu4_text7" translatable="false"> - Sexta línea muestra la calificación dada al film.</string>
+    <string name="help_menu4_subtitulo2" translatable="false">Funciones extras</string>
+    <string name="help_menu4_text8" translatable="false">Al mantener pulsado un film en la pantalla de Librería
+         se accede al modo borrar, donde puede eliminar uno o más films de la aplicación.</string>
+    <string name="help_menu4_text9" translatable="false">En el actionBar se tiene unos accesos directos para
+    buscar protagonista, añadir film y acceso a configuración.</string>
+
+    <string name="help_menu5_text1" translatable="false">En el apartado de Añadir Film puedes crear un
+        nuevo film que se guardará en la aplicación.</string>
+    <string name="help_menu5_subtitulo1" translatable="false">Rellenar Film</string>
+    <string name="help_menu5_text2" translatable="false"> Para crear un nuevo Film se debe rellenar todos
+         los campos necesarios: título del film, país del film, año de rodaje, protagonista, director y nota crítica.</string>
+    <string name="help_menu5_text3" translatable="false"> Para dar de alta después de rellenar los campos
+        debe presionar el botón de la esquina superior derecha.</string>
+    <string name="help_menu5_subtitulo2" translatable="false">Métodos de Acceso</string>
+     <string name="help_menu5_text4" translatable="false">Para crear un film se puede acceder desde el menú de la pantalla lateral odesde
+         acceso directo en el actionBar disponible en las pantallas de Títulos, Librería y Calificar.</string>
+
+    <string name="help_menu6_text1" translatable="false">Puedes eliminar films de la aplicación. Existe dos
+    métodos posibles para eliminar uno o más films.</string>
+    <string name="help_menu6_subtitulo1" translatable="false">Método 1: Menú Eliminar  desde el panel lateral</string>
+    <string name="help_menu6_text2" translatable="false">Desde el panel lateral se puede entrar
+        a la pantalla donde se muestra la librería de la aplicación y donde al pulsar en los films
+        se entra en modo borrar.</string>
+    <string name="help_menu6_subtitulo2" translatable="false">Método 2: desde la pantalla de Librería</string>
+    <string name="help_menu6_text3" translatable="false">En la pantalla de Librería tambien se puede entrar
+    en modo borrar, manteniendo pulsando un film.</string>
+
+    <string name="help_menu7_text1" translatable="false">Puedes buscar un protagonista de cualquier film
+        que esté almacenado en la aplicación. Al buscar un protagonista se mostrará una lista de títulos
+    donde aparece el protagonista buscado. Existe dos métodos posibles para buscar un protagonista</string>
+    <string name="help_menu7_subtitulo1" translatable="false">Método 1: Menú Buscar  desde el panel lateral</string>
+    <string name="help_menu7_text2" translatable="false">Desde el panel lateral se puede acceder al menú buscar protagonista
+        donde aparecerá una lista de protagonistas que existen en la aplicación. También puedes hacer una
+    búsqueda desde el actionBar y filtrar el protagonista a buscar.</string>
+    <string name="help_menu7_subtitulo2" translatable="false">Método 2: desde ActionBar</string>
+    <string name="help_menu7_text3" translatable="false">En las pantallas de listas se puede hacer una búsqueda de
+        algún protagonista. Las pantallas dónde es posible hacer las busquedas son: Títulos, Librería, Calificar y en Buscar</string>
+
+   <string name="help_menu8_text1" translatable="false">Puedes modificar la calificación de la nota de crítica de cualquier film
+   guardado.</string>
+    <string name="help_menu8_subtitulo1" translatable="false">Diálogo de Calificación</string>
+    <string name="help_menu8_text2" translatable="false">Cada media estrella representa un punto de la calificación.
+    La calificación máxima es de 10 puntos. Después de cambiar la calificación de un film se otorga un método
+    para deshacer el cambio, este método aparece como un mensaje en la parte inferior de la pnatalla.</string>
+    <string name="help_menu8_subtitulo2" translatable="false">Métodos de acceso al cambio de calificación</string>
+    <string name="help_menu8_text3" translatable="false">Existe dos métodos posibles para cambiar la calificación de un film.</string>
+ <string name="help_menu8_subtitulo3" translatable="false">Método desde el menú de la pantalla lateral</string>
+    <string name="help_menu8_text4" translatable="false">Desde la pantalla lateral se puede acceder al menú de Calificar, dónde se mostrará una lista de los
+        títulos guardados en la aplicación. Para cambiar la nota crítica solo hace falta pulsar en el título del
+        film que se quiere modificar.</string>
+    <string name="help_menu8_subtitulo4" translatable="false">Método desde la pantalla de Títulos</string>
+    <string name="help_menu8_text5" translatable="false">Desde la misma pantalla de Títulos se puede modificar la
+        calificación de un film manteniendo pulsado el título que se desea cambiar.</string>
 
     <string name="title_rating" translatable="false">Calificar</string>
     <string name="title_help" translatable="false">Menu de Ayuda</string>
