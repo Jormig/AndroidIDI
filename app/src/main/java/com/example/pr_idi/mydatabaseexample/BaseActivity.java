@@ -171,8 +171,8 @@ public class BaseActivity extends AppCompatActivity {
                         //menuItem.setChecked(true);
                         // Crear nuevo fragmento
                        // String title = menuItem.getTitle().toString();
-                        TextView username = (TextView) findViewById(R.id.username);
-                        username.setText(R.string.app_name);
+                      // TextView username = (TextView) findViewById(R.id.username);
+                       // username.setText(R.string.app_name);
                         selectItem(menuItem);
                         return true;
                     }

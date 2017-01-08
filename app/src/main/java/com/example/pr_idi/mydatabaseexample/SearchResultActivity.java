@@ -64,6 +64,8 @@ public class SearchResultActivity extends AppCompatActivity {
         myFilmData.close();
 
        if (myDataset.size()<=0) lv.setEmptyView(findViewById(R.id.busquedaVacia));
+       TextView tituloHelp = (TextView)   findViewById(R.id.titulo_search_films) ;
+       tituloHelp.setText(R.string.titulo_search_films);
    }
 
     @Override
