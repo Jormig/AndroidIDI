@@ -11,13 +11,22 @@
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-22.2.1_3129924a53059d63a52aaf3aaa9315071838d20d\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="10e0d995773a68b0f1387d46738fbcb56aabe190">
-        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ee224e17c91539921d9ed3e2099f0cc48b73fcf5\classes.dex" />
+        sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-base-8.4.0_572da422794f81dc2ee2cd6eb8742c27f7df11a4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.bignerdranch.android\recyclerview-multiselect\0.2\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8a90606ee73178bb9b1a336dc36ae3ec25ad33ea">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.bignerdranch.android-recyclerview-multiselect-0.2_d52953c05dcbccbb5539a0edc3e37772df585b53.jar" />
     </item>
     <item
         is-multidex="true"
@@ -29,6 +38,15 @@
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-23.0.0_8871e3b545cccc916266b81f12c18cb9cc75399c\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\design\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="1821601ddbec5ff125653097812823388700af74">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.android.support-design-22.2.1_3129924a53059d63a52aaf3aaa9315071838d20d.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-base\8.4.0\jars\classes.jar"
         jumboMode="true"
@@ -36,6 +54,15 @@
         revision="22.0.1"
         sha1="fef2b3e4b6b1b0e5fe7b69fa137a5fa55a3182ab">
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-base-8.4.0_572da422794f81dc2ee2cd6eb8742c27f7df11a4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.android.support-support-v4-23.0.0_8871e3b545cccc916266b81f12c18cb9cc75399c.jar" />
     </item>
     <item
         is-multidex="true"
@@ -65,6 +92,51 @@
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.0-beta4_010d2a20331bdbc28d9295b2e166c5023906f6b3\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.0-beta4\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="662d7533b25a666c649c10a16b42edfb95f25a4f">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.android.support.constraint-constraint-layout-1.0.0-beta4_010d2a20331bdbc28d9295b2e166c5023906f6b3.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="7ab561400a48c90523fc0b2612366f5eb1060158">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ffdc92926fc4ee7cea8544186d43f64bafd55ec4\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.0-beta4\constraint-layout-solver-1.0.0-beta4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="0a9cb567dc008f570c28531720168f19148da965">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\constraint-layout-solver-1.0.0-beta4_27917478ec5e1d4a144cd325da88cf424af2be48.jar" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="22.0.1"
+        sha1="10e0d995773a68b0f1387d46738fbcb56aabe190">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_ee224e17c91539921d9ed3e2099f0cc48b73fcf5\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-basement\8.4.0\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8e673cdfadd8f2d98fdb2fda2285c30f6e449782">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-basement-8.4.0_7f0e1fa60b5770055858063f40dc75b074ce1d2c.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
         jumboMode="true"
@@ -81,6 +153,24 @@
         revision="22.0.1"
         sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-22.2.1_e6e4405d01154659ffe9faf7ba1629f5f777cfb0\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.0.0\jars\libs\internal_impl-23.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\internal_impl-23.0.0_dd91d7095cd8427f420b90e2a016a3c141b75287.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.android.support-appcompat-v7-22.2.1_e6e4405d01154659ffe9faf7ba1629f5f777cfb0.jar" />
     </item>
     <item
         is-multidex="true"
@@ -101,6 +191,24 @@
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.0.0_47a8c1b1200b40d81a681408799330ce1d72d6e7\classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\22.1.1\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="e0b0c35d02308b270015a74cada4887e2e49b889">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.android.support-recyclerview-v7-22.1.1_a00233873f29f465df1e9529e08d788abc54794d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\adela\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.0.0\support-annotations-23.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="22.0.1"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\support-annotations-23.0.0_47a8c1b1200b40d81a681408799330ce1d72d6e7.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
         jumboMode="true"
@@ -110,13 +218,13 @@
         <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.google.android.gms-play-services-appindexing-8.4.0_7fb36dad9e2c2a4093b8da75b6ded6913f558378\classes.dex" />
     </item>
     <item
-        is-multidex="true"
-        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
+        is-multidex="false"
+        jar="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\exploded-aar\com.google.android.gms\play-services-appindexing\8.4.0\jars\classes.jar"
+        jumboMode="false"
         optimize="true"
         revision="22.0.1"
-        sha1="7ab561400a48c90523fc0b2612366f5eb1060158">
-        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_ffdc92926fc4ee7cea8544186d43f64bafd55ec4\classes.dex" />
+        sha1="65d086ee9daaf87b5af62ad24471edafa433354c">
+        <dex dex="C:\Users\adela\Desktop\Android Apps\AndroidIDI\app\build\intermediates\pre-dexed\release\com.google.android.gms-play-services-appindexing-8.4.0_7fb36dad9e2c2a4093b8da75b6ded6913f558378.jar" />
     </item>
     <item
         is-multidex="true"
