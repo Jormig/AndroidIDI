@@ -58,7 +58,7 @@ public class ListTitlesSearchActivity extends BaseActivity {
         myFilmData = new FilmData(this);
         myFilmData.open();
         String order = MySQLiteHelper.COLUMN_PROTAGONIST;
-        myDataset = myFilmData.getAllActors(order.concat(" ASC"));
+        myDataset = myFilmData.getAllActors(order.concat(" COLLATE NOCASE ASC"));
         lv = (ListView) findViewById(R.id.ListView_listado);
         myCountFilms = myFilmData.getCountFilms( myDataset);
         adapter = new ListTitleSearchAdapter(this, myDataset,myCountFilms);
@@ -79,12 +79,26 @@ public class ListTitlesSearchActivity extends BaseActivity {
 
     private void reloadAllData(){
         myFilmData.open();
+        myDataset.clear();
         String order = MySQLiteHelper.COLUMN_PROTAGONIST;
-        myDataset = myFilmData.getAllActors(order.concat(" ASC"));
+        myDataset = myFilmData.getAllActors(order.concat(" COLLATE NOCASE ASC"));
+        myCountFilms = myFilmData.getCountFilms( myDataset);
         adapter.clear();
         adapter.addAll(myDataset,myCountFilms);
         adapter.notifyDataSetChanged();
         myFilmData.close();
+    }
+
+    private void reloadWithQuery(String query){
+        myFilmData.open();
+        myDataset.clear();
+        myDataset = myFilmData.getSameActor(query);
+        myCountFilms = myFilmData.getCountFilms( myDataset);
+        adapter.clear();
+        adapter.addAll(myDataset,myCountFilms);
+        adapter.notifyDataSetChanged();
+        myFilmData.close();
+
     }
 
     @Override
@@ -116,8 +130,23 @@ public class ListTitlesSearchActivity extends BaseActivity {
 
             @Override
             public boolean onQueryTextChange(String newText) {
+              /*  Log.i("onQueryTextChange", "out this worked");
+                if(searchView.getWidth()>0)
+                {
+                    Log.i("onQueryTextChange", "IF this worked");
+                    reloadWithQuery(newText);
+                    adapter.notifyDataSetChanged();
+                }
+
+               //if (newText != null && !newText.isEmpty() && !newText.equals(" "))
+
+                else {
+                    Log.i("onQueryTextChange", "ELSE this worked");
+                    reloadAllData();
+                }*/
+
                 return false;
-            }//TODO
+            }
         });
 
         return super.onCreateOptionsMenu(menu);

@@ -50,33 +50,44 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
                 ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
                 + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
                 "values('El ataque de los tomates asesinos'," +
-                "'Estados Unidos de America'," +
+                "'USA'," +
                 "1986," +
                 "'John De Bello'," +
                 "'George Clooney'," +
-                "1);");
+                "9);");
         database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
                 "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
                 ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
                 + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
-                "" +
-                "values('El ataque de los tomates asesinos 2'," +
-                "'Estados Unidos de America'," +
-                "1987," +
-                "'John De Bello'," +
-                "'Michael Villani'," +
-                "5);");
+
+                "values('Matrix'," +
+                "'USA'," +
+                "1999," +
+                "'The Wachowski Brothers'," +
+                "'Keanu Reeves'," +
+                "7);");
         database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
                 "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
                 ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
                 + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
-                "" +
-                "values('Breakdance 2: Electic Boogaloo'," +
-                "'Estados Unidos de America'," +
-                "1984," +
-                "'Sam Firstenberg'," +
-                "'Lucinda Dickey'," +
-                "4);");
+
+                "values('Cadena perpetua'," +
+                "'USA'," +
+                "1994," +
+                "'Frank Darabont'," +
+                "'Tim Robbins'," +
+                "8);");
+        database.execSQL("INSERT INTO "+TABLE_FILMS+" " +
+                "("+COLUMN_TITLE+", "+COLUMN_COUNTRY+"," +
+                ""+COLUMN_YEAR_RELEASE+","+COLUMN_DIRECTOR+","
+                + COLUMN_PROTAGONIST+","+COLUMN_CRITICS_RATE+") " +
+
+                "values('Eternal sunshine of the spotless mind'," +
+                "'USA'," +
+                "2003," +
+                "'Michel Gondry'," +
+                "'Jim Carrey'," +
+                "8);");
     }
 
     @Override

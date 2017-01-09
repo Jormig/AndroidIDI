@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Pelis cutres</string>
+    <string name="app_name">My Film Database</string>
     <string name="textview" translatable="false">TextView</string>
     <string name="about" translatable="false">About</string>
     <string name="app_name_about" translatable="false">Pelis cutres - About</string>
@@ -34,7 +34,7 @@
 
     <string name="consejo_lisTitleAct">Consejo: Al manetener pulsado un título puedes modificar la calificación del Film.</string>
     <string name="consejo_lisFilmAct">Consejo: Al manetener pulsado en un Film puedes entrar en modo borrar Films.</string>
-    <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film.</string>
+    <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film. Al rellenar los campos presiona el botón de la esquina derecha para dar de alta.</string>
     <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
     <string name="consejo_lisFilmDeleteAct">Al pulsar en un Film puedes entrar en modo borrar Films.</string>
 
@@ -175,7 +175,7 @@
 
     <string name="title_rating" translatable="false">Calificar</string>
     <string name="titulo_search_films" translatable="false">Films</string>
-    <string name="title_help" translatable="false">Menu de Ayuda</string>
+    <string name="title_help" translatable="false">Menú de Ayuda</string>
     <string name="busquedaVacia" translatable="false">No hay protagonista con el nombre buscado.</string>
     <string name="search_label">buscar actor o actriz ...</string>
     <string name="search_hint">buscar actor o actriz ...</string>

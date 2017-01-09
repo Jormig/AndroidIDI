@@ -48,10 +48,8 @@ public class FilmData {
 
 
     public void updateRating(int rate,long id){
-
         ContentValues values = new ContentValues();
         values.put(MySQLiteHelper.COLUMN_CRITICS_RATE, rate);
-
         database.update(MySQLiteHelper.TABLE_FILMS,values, MySQLiteHelper.COLUMN_ID+"="+id,null );
     }
 
@@ -110,6 +108,7 @@ public class FilmData {
             Film comment = cursorToFilm(cursor);
             comments.add(comment);
             cursor.moveToNext();
+            Log.d("getAllFilms", "getAllFilms " + comment.getTitle() + " " + comment.getDirector() + " " + String.valueOf(comment.getYear()));
         }
         // make sure to close the cursor
         cursor.close();
@@ -126,6 +125,7 @@ public class FilmData {
             Film comment = cursorToFilm(cursor);
             comments.add(comment);
             cursor.moveToNext();
+            Log.d("getAllActors", "getAllActors " + comment.getTitle() + " " + comment.getDirector() + " " + String.valueOf(comment.getYear()));
         }
         // make sure to close the cursor
         cursor.close();
@@ -133,18 +133,39 @@ public class FilmData {
     }
 
 
+
     public  List<Film> getFilmsfromActor(String actor){
         List<Film> comments = new ArrayList<>();
-        String Order = MySQLiteHelper.COLUMN_TITLE;
-        String whereClause = MySQLiteHelper.COLUMN_PROTAGONIST +" LIKE "+ "'"+actor+"'" ;
+        String Order = MySQLiteHelper.COLUMN_TITLE.concat(" COLLATE NOCASE ASC");
+        String whereClause = MySQLiteHelper.COLUMN_PROTAGONIST +" LIKE "+ "'%"+actor+"%'" ;
         Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
-                allColumns, whereClause, null, null, null, Order);
+                allColumns, whereClause, null, null, null, Order,null);
 
         cursor.moveToFirst();
         while (!cursor.isAfterLast()) {
             Film comment = cursorToFilm(cursor);
             comments.add(comment);
             cursor.moveToNext();
+            Log.d("getFilmsFromActor", "getFilmsFromActor " + comment.getTitle() + " " + comment.getDirector() + " " + String.valueOf(comment.getYear()));
+        }
+        // make sure to close the cursor
+        cursor.close();
+        return comments;
+    }
+
+    public  List<Film> getSameActor(String actor){
+        List<Film> comments = new ArrayList<>();
+        String Order = MySQLiteHelper.COLUMN_PROTAGONIST.concat(" COLLATE NOCASE ASC");
+        String whereClause = MySQLiteHelper.COLUMN_PROTAGONIST +" LIKE "+ "'%"+actor+"%'" ;
+        Cursor cursor = database.query(true, MySQLiteHelper.TABLE_FILMS,
+                allColumns, whereClause, null, MySQLiteHelper.COLUMN_PROTAGONIST, null, Order,null);
+
+        cursor.moveToFirst();
+        while (!cursor.isAfterLast()) {
+            Film comment = cursorToFilm(cursor);
+            comments.add(comment);
+            cursor.moveToNext();
+            Log.d("getFilmsFromActor", "getFilmsFromActor " + comment.getTitle() + " " + comment.getDirector() + " " + String.valueOf(comment.getYear()));
         }
         // make sure to close the cursor
         cursor.close();
@@ -156,7 +177,7 @@ public class FilmData {
         List<Integer> num = new ArrayList<Integer>();
         final String TAG = FilmData.class.getSimpleName();
         for (int i =0 ; i< protas.size() ; ++i) {
-            String whereClause = MySQLiteHelper.COLUMN_PROTAGONIST + " LIKE " + "'" + protas.get(i).getProtagonist() + "'";
+            String whereClause = MySQLiteHelper.COLUMN_PROTAGONIST + " LIKE " + "'%" + protas.get(i).getProtagonist() + "%'";
             Cursor cursor = database.query(MySQLiteHelper.TABLE_FILMS,
                     new String[]{"count(*)"}, whereClause, null, null, null, null);
 

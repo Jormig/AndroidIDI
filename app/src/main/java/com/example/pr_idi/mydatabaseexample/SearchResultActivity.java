@@ -62,10 +62,11 @@ public class SearchResultActivity extends AppCompatActivity {
         lv.setAdapter(adapter);
         setTitle(capitalizeAllWords(query));
         myFilmData.close();
-
+        String actor = " ";
        if (myDataset.size()<=0) lv.setEmptyView(findViewById(R.id.busquedaVacia));
+       else actor = myDataset.get(0).getProtagonist();
        TextView tituloHelp = (TextView)   findViewById(R.id.titulo_search_films) ;
-       tituloHelp.setText(R.string.titulo_search_films);
+       tituloHelp.setText(getString(R.string.titulo_search_films) + " de " + actor);
    }
 
     @Override

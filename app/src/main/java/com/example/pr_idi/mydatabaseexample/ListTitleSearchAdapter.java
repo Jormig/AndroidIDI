@@ -9,6 +9,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import java.util.List;
+import java.util.logging.Filter;
 
 /**
  * Created by taos on 01/01/2017.
@@ -78,6 +79,11 @@ public class ListTitleSearchAdapter extends BaseAdapter  {
 
         return v;
     }
+
+
+
+
+
     private static String capitalizeAllWords(String str) {
         String phrase = "";
         boolean capitalize = true;

@@ -53,12 +53,11 @@ public class ListTitleActivity extends BaseActivity {
 
     protected void onResume() {
         super.onResume();
-
+        lv = (ListView) findViewById(R.id.ListView_listado);
         myFilmData = new FilmData(this);
         myFilmData.open();
         String order = MySQLiteHelper.COLUMN_TITLE;
-        myDataset = myFilmData.getAllFilms(order.concat(" ASC"));
-        lv = (ListView) findViewById(R.id.ListView_listado);
+        myDataset = myFilmData.getAllFilms(order.concat(" COLLATE NOCASE ASC"));
         adapter = new ListTitleAdapter(this, myDataset);
         lv.setAdapter(adapter);
         lv.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
@@ -133,7 +132,7 @@ public class ListTitleActivity extends BaseActivity {
     private void reloadAllData(){
         myFilmData.open();
         String order = MySQLiteHelper.COLUMN_TITLE;
-        myDataset = myFilmData.getAllFilms(order.concat(" ASC"));
+        myDataset = myFilmData.getAllFilms(order.concat(" COLLATE NOCASE ASC"));
         adapter.clear();
         adapter.addAll(myDataset);
         adapter.notifyDataSetChanged();

@@ -4,7 +4,8 @@
     android:id="@+id/help"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.pr_idi.mydatabaseexample.Help">
+    tools:context="com.example.pr_idi.mydatabaseexample.Help"
+    android:background="@color/background_material_light">
 
     <LinearLayout
         android:orientation="vertical"
@@ -24,7 +25,8 @@
         <ListView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/list_help" />
+            android:id="@+id/list_help"
+            android:background="@color/background_material_light" />
     </LinearLayout>
 
 </RelativeLayout>
