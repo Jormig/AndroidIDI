@@ -34,9 +34,9 @@
 
     <string name="consejo_lisTitleAct">Consejo: Al manetener pulsado un título puedes modificar la calificación del Film.</string>
     <string name="consejo_lisFilmAct">Consejo: Al manetener pulsado en un Film puedes entrar en modo borrar Films.</string>
-    <string name="consejo_PantallaAltaAct">Consejo: Puedes dar de alta un nuevo Film. Al rellenar los campos presiona el botón de la esquina derecha para dar de alta.</string>
+    <string name="consejo_PantallaAltaAct">Consejo: Rellena y presiona el botón de la esquina superior derecha para crear.</string>
     <string name="consejo_lisCalificarAct">Consejo: Al pulsar un título puedes modificar su calificación.</string>
-    <string name="consejo_lisFilmDeleteAct">Al pulsar en un Film puedes entrar en modo borrar Films.</string>
+    <string name="consejo_lisFilmDeleteAct">Consejo: Al pulsar en un Film puedes entrar en modo borrar Films.</string>
 
     <string name="help_menu1" translatable="false">Funcionamiento general de la aplicación</string>
     <string name="help_menu2" translatable="false">Cómo navegar entre las opciones</string>

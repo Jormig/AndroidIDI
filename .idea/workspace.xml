@@ -10,27 +10,14 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b698f3db-b561-422b-b42f-1dcd2980f721" name="Default" comment="modificacion de theme">
+    <list default="true" id="b698f3db-b561-422b-b42f-1dcd2980f721" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-22.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/FilmData.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/FilmData.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitleActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitleActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitleSearchAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitleSearchAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitlesSearchActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitlesSearchActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/MySQLiteHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/MySQLiteHelper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/SearchResultActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/SearchResultActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/help.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/help.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <list id="5a445133-8997-45e1-aeac-15288b66525d" name="Failed commit: Default" comment="PantallaAltaFilmActivity, cambios" />
     <ignored path="AndroidIDI.iws" />
@@ -63,7 +50,7 @@
     <favorites_list name="AndroidIDI" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.37333333">
+    <splitter split-orientation="horizontal" split-proportion="0.6253333">
       <split-first>
         <leaf>
           <file leaf-file-name="ListFilmActivity.java" pinned="false" current-in-tab="false">
@@ -89,8 +76,8 @@
           <file leaf-file-name="strings.xml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-1839">
-                  <caret line="36" column="166" selection-start-line="36" selection-start-column="166" selection-end-line="36" selection-end-column="166" />
+                <state relative-caret-position="558">
+                  <caret line="36" column="121" selection-start-line="36" selection-start-column="121" selection-end-line="36" selection-end-column="121" />
                   <folding />
                 </state>
               </provider>
@@ -135,8 +122,8 @@
           <file leaf-file-name="ListTitlesSearchActivity.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitlesSearchActivity.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="68">
-                  <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+                <state relative-caret-position="425">
+                  <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
                   <folding />
                 </state>
               </provider>
@@ -1868,6 +1855,16 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidIDI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AndroidIDI" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane">
@@ -2357,7 +2354,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483916719944</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="orderby insensitive case">
+      <created>1483929050109</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1483929050110</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TodoView">
@@ -2469,7 +2473,8 @@
     <MESSAGE value="help menu" />
     <MESSAGE value="help hecho" />
     <MESSAGE value="modificacion de theme" />
-    <option name="LAST_COMMIT_MESSAGE" value="modificacion de theme" />
+    <MESSAGE value="orderby insensitive case" />
+    <option name="LAST_COMMIT_MESSAGE" value="orderby insensitive case" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2937,14 +2942,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitlesSearchActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListFilmActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="458">
@@ -2953,10 +2950,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/pr_idi/mydatabaseexample/ListTitlesSearchActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="87" column="39" selection-start-line="87" selection-start-column="39" selection-end-line="87" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1839">
-          <caret line="36" column="166" selection-start-line="36" selection-start-column="166" selection-end-line="36" selection-end-column="166" />
+        <state relative-caret-position="558">
+          <caret line="36" column="121" selection-start-line="36" selection-start-column="121" selection-end-line="36" selection-end-column="121" />
           <folding />
         </state>
       </provider>
