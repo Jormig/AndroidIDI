@@ -183,4 +183,11 @@
 
     <string name="versi_n_de_la_aplicaci_n">Versión de la aplicación</string>
     <string name="versionids">1.0</string>
+    <string name="creadores_de_la_aplicaci_n">Creadores de la aplicación</string>
+    <string name="italo_castillo_y_jorge_alvarez">Italo Castillo y Jorge Alvarez</string>
+    <string name="protagonista">Protagonista:</string>
+    <string name="director">Director:</string>
+    <string name="pais">Pais:</string>
+    <string name="any">Any:</string>
+    <string name="nota_de_la_critica">Nota de la Critica:</string>
 </resources>

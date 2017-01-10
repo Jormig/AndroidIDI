@@ -41,42 +41,52 @@ public class PantallaAltaFilmActivity extends BaseActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.action_add_item:
+                boolean isEmpty = false;
                 MySQLiteHelper  dbHelper = new MySQLiteHelper(this);
                 SQLiteDatabase database = dbHelper.getWritableDatabase();
 
                 Film film = new Film();
                 FilmData filmData = new FilmData(this);
                 EditText edit =  (EditText) findViewById(R.id.editTitulo);
+                isEmpty = edit.getText().toString().equals("");
                 film.setTitle(edit.getText().toString());
 
                 edit =  (EditText) findViewById(R.id.editPais);
+                isEmpty = edit.getText().toString().equals("");
                 film.setCountry(edit.getText().toString());
 
                 edit =  (EditText) findViewById(R.id.editAny);
-                if(edit.getText().toString().equals(""))
-                    film.setYear(0);
-                else
+                isEmpty = edit.getText().toString().equals("");
+                if(!isEmpty)
                     film.setYear(Integer.valueOf(edit.getText().toString()));
+
                 edit =  (EditText) findViewById(R.id.editProt);
+                isEmpty = edit.getText().toString().equals("");
                 film.setProtagonist(edit.getText().toString());
 
                 edit =  (EditText) findViewById(R.id.editDirector);
+                isEmpty = edit.getText().toString().equals("");
                 film.setDirector(edit.getText().toString());
 
                 edit =  (EditText) findViewById(R.id.editNotaCritica);
-                if(edit.getText().toString().equals(""))
-                    film.setCritics_rate(0);
-                else
+                isEmpty = edit.getText().toString().equals("");
+                if(!isEmpty)
                     film.setCritics_rate(Integer.valueOf(edit.getText().toString()));
-                filmData.open();
-                filmData.createFilm(film);
-                Toast toast1 =
-                        Toast.makeText(getApplicationContext(),
-                                "Pelicula "+ film.getTitle() +" creada", Toast.LENGTH_SHORT);
+                if(isEmpty){
+                            Toast.makeText(getApplicationContext(),
+                                    "Por favor, introduzca todos los campos", Toast.LENGTH_SHORT).show();
+                    return false;
+                }else {
+                    filmData.open();
+                    filmData.createFilm(film);
+                    Toast toast1 =
+                            Toast.makeText(getApplicationContext(),
+                                    "Pelicula " + film.getTitle() + " creada", Toast.LENGTH_SHORT);
 
-                toast1.show();
-                finish();
-                return true;
+                    toast1.show();
+                    finish();
+                    return true;
+                }
             default:
                 return super.onOptionsItemSelected(item);
         }

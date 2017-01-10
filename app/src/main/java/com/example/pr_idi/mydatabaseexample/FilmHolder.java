@@ -3,6 +3,7 @@ package com.example.pr_idi.mydatabaseexample;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.res.Resources;
 import android.graphics.Color;
 import android.view.ActionMode;
 import android.view.Menu;
@@ -40,11 +41,11 @@ public class FilmHolder extends SwappingHolder
     public void bindFilm(Film film){
         mFilm = film;
         mTituloTextView.setText(mFilm.getTitle());
-        mPaisTextView.setText(mFilm.getCountry());
-        mAnyTextView.setText(String.valueOf(mFilm.getYear()));
-        mDirectorTextView.setText(mFilm.getDirector());
-        mProtagonistaTextView.setText(mFilm.getProtagonist());
-        mNotaCriticaTextView.setText(String.valueOf(film.getCritics_rate()).concat("/10"));
+        mPaisTextView.setText(String.valueOf(ctxt.getText(R.string.pais)).concat(" "+mFilm.getCountry()));
+        mAnyTextView.setText(String.valueOf(ctxt.getText(R.string.any)).concat(" "+String.valueOf(mFilm.getYear())));
+        mDirectorTextView.setText(String.valueOf(ctxt.getText(R.string.director)).concat(" "+mFilm.getDirector()));
+        mProtagonistaTextView.setText(String.valueOf(ctxt.getText(R.string.protagonista)).concat(" "+mFilm.getProtagonist()));
+        mNotaCriticaTextView.setText(String.valueOf(ctxt.getText(R.string.nota_de_la_critica)).concat(" "+String.valueOf(film.getCritics_rate()).concat("/10")));
     }
     @Override
     public void onClick(View v) {

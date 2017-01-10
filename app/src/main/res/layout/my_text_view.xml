@@ -20,56 +20,51 @@
             android:layout_alignParentStart="true"
             android:textColor="@android:color/black"
             android:textColorHighlight="@android:color/black"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:textSize="18sp" />
 
         <TextView
-            android:text="Pais"
+            android:text="@string/pais"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textPais"
             android:textColorHighlight="@android:color/black"
-            android:textColor="@android:color/black"
             android:layout_below="@+id/textTitulo"
             android:layout_alignParentEnd="true"
             android:layout_weight="1" />
 
         <TextView
-            android:text="Any"
+            android:text="@string/any"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textAny"
-            android:textColor="@android:color/black"
             android:layout_weight="1" />
+         <TextView
+                android:text="@string/protagonista"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textProtagonista"
+                android:textColorHighlight="@android:color/black"
+                android:layout_below="@+id/textProtagonista"
+                android:layout_alignParentStart="true"
+                android:layout_weight="1" />
 
         <TextView
-            android:text="Protagonista"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/textProtagonista"
-            android:textColorHighlight="@android:color/black"
-            android:textColor="@android:color/black"
-            android:layout_below="@+id/textProtagonista"
-            android:layout_alignParentStart="true"
-            android:layout_weight="1" />
-
-        <TextView
-            android:text="Director"
+            android:text="@string/director"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textDirector"
             android:textColorHighlight="@android:color/black"
-            android:textColor="@android:color/black"
             android:layout_below="@+id/textView4"
             android:layout_alignParentStart="true"
             android:layout_weight="1" />
 
         <TextView
-            android:text="NotaCritica"
+            android:text="@string/nota_de_la_critica"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/textNotaCritica"
             android:textColorHighlight="@android:color/black"
-            android:textColor="@android:color/black"
             android:layout_below="@+id/textNotaCritica"
             android:layout_alignParentStart="true"
             android:layout_weight="1" />

@@ -28,4 +28,26 @@
 
     </LinearLayout>
 
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:background="@drawable/line_divider_layout">
+
+        <TextView
+            android:text="@string/creadores_de_la_aplicaci_n"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView3"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:text="@string/italo_castillo_y_jorge_alvarez"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView4" />
+
+    </LinearLayout>
 </LinearLayout>
